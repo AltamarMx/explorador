@@ -1,0 +1,11 @@
+
+
+Hola, en los siguientes minutos, exploraremos cómo localizar y reemplazar información en un dataframe usando `.loc[]` de pandas.
+
+`.loc[]` nos permite seleccionar renglones y columnas específicas utilizando sus etiquetas. Es una forma directa de obtener exactamente los datos que necesitamos. También lo podemos usar para "cortar" secciones de nuestro DataFrame, seleccionando un conjunto continuo de renglones basado en sus etiquetas.
+
+También es útil para filtrar datos. Con `.loc[]`, podemos imponer condiciones para acceder solo a las partes del DataFrame que cumplen ciertos criterios.
+
+Esta función es clave cuando necesitamos asignar o cambiar valores en nuestro DataFrame.
+
+Vamos a ver todo esto con un conjunto de datos.

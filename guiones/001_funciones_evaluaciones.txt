@@ -1,0 +1,20 @@
+Hola, 
+En este video haremos un repaso rápido de las funciones pues las usaremos en los ejercicios del curso.
+
+  Una función  es un bloque de código reutilizable que realiza una tarea específica con una sintaxis específica y que puede ser reutilizada de manera fácil. Puedes pensar en ellas como mini-programas dentro de tu flujo de trabajo.
+
+
+Las funciones pueden o no aceptar argumentos, que  son valores que puedes pasar a la función para que los utilice en su trabajo. Estos pueden ser opcionales o requeridos, dependiendo de cómo diseñes tu función.
+
+Además, las funciones pueden escribirse para que regresen algo, una lista, un dataframe, un conjunto de datos transformado o simplemente que realicen alguna acción. Para regresar algo se utiliza "return".
+
+Si en un proyecto tienes un conjunto de código que usas más de una vez en tu flujo de trabajo, lo más seguro es que te convenga definir una función y reutilizarla. Considera que las funciones te permiten tener:
+
+1. Modularidad: Dividir tareas en funciones más pequeñas y manejables, lo que facilita la organización del código.
+
+2. Reutilización: Puedes reutilizar las mismas funciones en diferentes partes de tu proyecto o incluso en proyectos futuros, lo que ahorra tiempo y evita duplicación de código.
+
+3. Claridad: Las funciones bien nombradas hacen que el código sea más legible y comprensible, lo que es crucial al colaborar con otras personas.
+
+Vamos a la libreta de Jupyter para un repaso rápido de funciones.
+

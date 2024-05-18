@@ -1,0 +1,12 @@
+
+Hola, en esta sesion exploraremos cómo realizar operaciones entre columnas, crear nuevas y eliminarlas, utilizando Pandas  y por supuesto, un dataframe.
+
+Al trabajar con DataFrames, a menudo necesitamos realizar cálculos entre columnas. Esto puede ser tan simple como sumar dos columnas para obtener un total o aplicar una fórmula más compleja.
+
+Tambien podemos Crear una nueva columna y es muy sencillo. Podemos asignar el resultado de una operación directamente a una nueva columna en nuestro DataFrame, lo cual se reflejará al instante en nuestra estructura de datos.
+
+
+Si una columna ya no es necesaria, o si el resultado de una operación es temporal, podemos eliminarla. Con un simple comando, la columna seleccionada se elimina del DataFrame.
+
+
+Ahora, vamos a ver como se hace todo esto desde nuestra libreta de Jupyter.

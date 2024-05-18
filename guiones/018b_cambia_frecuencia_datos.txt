@@ -1,0 +1,10 @@
+
+Hola, en este video vamos a ver como cambiar la frecuencia de tus datos con resample de pandas. Por ejemplo, si quieres pasar de datos cada minuto a cada hora, realizando un promedio o sacando el valor máximo en ese intervalo, necesitas aprender la funcion resample.
+
+Esta funci’on es esencial para trabajar con series temporales
+
+Esta función nos permite cambiar la frecuencia de nuestros datos, pasando de minutos a horas, días a semanas y hasta frecuencias anuales.
+
+
+Si estas analizando series temporales, `resample` te abre un mundo de posibilidades, pero tiene algunas limitaciones y por supuesto, una sintaxis, vamos a verla a la libreta de Jupyter.
+

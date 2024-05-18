@@ -1,0 +1,15 @@
+Hola, hoy vamos a explorar cómo acceder y manipular datos específicos dentro de un DataFrame en Pandas utilizando un conjunto de datos de una serie temporal.
+
+Para acceder a una sola columna, usamos corchetes y el nombre de la columna como una cadena,  esto nos devuelve la serie de datos de esa columna específica. Supon que tengo un dataframe con una columna llamada To, entonces pongo To entre comillas y corchetes cuadrados.
+
+También podemos acceder a una columna utilizando la notación de punto: `dataframe.To`. Sin embargo, esto no es recomendable si el nombre de la columna contiene espacios o caracteres especiales.
+
+Si queremos seleccionar múltiples columnas, lo hacemos pasando una lista de nombres de columnas, y nos las da regresa en el orden especificado.
+
+Para obtener la primera fila del DataFrame, utilizamos `.iloc` con el índice de la fila a la que queremos acceder `.iloc` se basa en la posición y siempre comienza desde cero.
+
+Si necesitamos un rango de filas, extendemos la indexación con iloc desde la posición inicial a la final, separadas por dos puntos. 
+
+Para acceder a la última fila, usamos un índice negativo con `.iloc`: `df.iloc[-1]`. En Python, un índice negativo cuenta desde el final hacia atrás.
+
+Ahora vamos a verlo en la libreta.

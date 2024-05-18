@@ -1,0 +1,12 @@
+
+Hola, en este video, vamos a ver las advertencias en Pandas y su significado en nuestro flujo de trabajo de análisis de datos. Todas las advertencias o warnings aparecen en la libreta de Jupyter con un color rojo. La recomendación es que leas atentamente lo que te dicen e intentes resolverlo o lo tomes en cuenta para ocasiones futuras.
+
+
+Primero estan las advertencias o warnings de obsolescencia, donde se te informa que una funcion dejará de usarse, cambia la sintaxis o que algún programa como pandas, dependerá de otro.
+
+
+Luego está otro tipo de Warnings donde una operación está permitida, pero no hace lo mismo en las diferentes versiones de Pandas y se ha actualizado y recomendado una manera de hacerlo para que sea robusto.
+
+Tal vez uno de los warnings más dificiles de detectar son los de elementos duplicados en columnas, especialmente al trabajar con  fechas e indices.
+
+Vamos a la libreta para ver cada una de estas advertencias.

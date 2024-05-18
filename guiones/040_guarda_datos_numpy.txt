@@ -1,0 +1,10 @@
+
+"Hola, retomaremos  nuestro proyecto del análisis de flujo en imágenes para ver cómo guardar nuestros datos procesados para poder recargarlos fácilmente en el futuro o en otra libreta.
+
+
+Después de procesar nuestras imágenes de flujo, tenemos un arreglo de NumPy por cada canal, que es la información que queremos guardar. Para guardar estos datos, usaremos `np.save`. Esto guarda nuestro arreglo en un archivo con el formato `.npy`, ideal para datos de NumPy.
+
+
+Más tarde, cuando necesitemos estos datos de nuevo, podemos cargarlos rápidamente con `np.load`.
+
+Vamos a ver como se hace para conocer la sintaxis y ademas verificar que lo hemos hecho bien.

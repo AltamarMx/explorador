@@ -1,0 +1,17 @@
+Hola, en este video vamos a sumergirnos en el mundo de NumPy, una de las bibliotecas más potentes y fundamentales para la computación científica en Python. Primero, te explicaré qué es NumPy y por qué es una herramienta indispensable para los científicos de datos y desarrolladores. Luego, te mostraré cómo instalar NumPy en tu entorno Python, y revisaremos el concepto del array.
+
+
+NumPy tiene sus raíces en el proyecto Numeric, iniciado por Jim Hugunin en 1995, y es considerado como el primer paquete de Python diseñado específicamente para operaciones numéricas. En 2005, Travis Oliphant incorpora caracteristicas de Numarray a Numerica, naciendo NumPy. Es interesante destacar que Python no fue creado pensando para computo numérico. 
+
+NumPy,  significa "Numerical Python", y es la piedra angular para el manejo de arreglos o arrays y matrices multidimensionales. NumPy tiene una gran colección de funciones matemáticas y estadísticas que facilitan operaciones complejas en grandes volúmenes de datos con una velocidad y eficiencia notables. Además, NumPy se integra perfectamente con otras bibliotecas de Python como PyToch o TensorFlow, librerias muy usadas en inteligencia artificial.  
+
+Puedes consultar la documentación de NumPy en la página numpy.org, ahí encontrarás desde como se instala, la documentación, tutoriales, acceso a la comunidad de desarrolladores y usuarios, información acerca del proyecto, noticias y como contribuir con esta gran biblioteca.
+
+
+Un array o arreglo en NumPy es el objeto principal de esta biblioteca y se caracteriza por ser un arreglo multidimensional homogéneo. Esto significa que está compuesto de, generalmente números y todos del mismo tipo. Estos elementos están indexados por una tupla de enteros no negativos. En el mundo de NumPy, las dimensiones de estos arrays se conocen como ejes.
+
+La gran ventaja de los arrays de NumPy frente a las listas  de Python es su capacidad para realizar operaciones matemáticas y estadísticas de forma rápida y eficiente en grandes conjuntos de datos.
+
+Otra característica importante de los arrays de NumPy es que permiten realizar operaciones elemento a elemento sin la necesidad de ciclos explícitos. Esto no solo simplifica el código, sino que también mejora significativamente el rendimiento. Además, NumPy proporciona una amplia gama de herramientas y métodos para manipular estos arrays, como la indexación, el slicing, la manipulación de arrays, entre otros.
+
+Vamos a la libreta para ver como se instala y verifica la versión de Numpy y experimentar con los arrays.

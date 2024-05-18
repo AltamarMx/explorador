@@ -1,0 +1,14 @@
+Hola, en este video vamos a comenzar con las operaciones básicas con NumPy.
+
+
+Primero, veamos cómo crear arreglos multidimensionales. NumPy ofrece varias funciones para esto. Por ejemplo, `np.zeros` crea un arreglo lleno de ceros, mientras que `np.ones`, asì, hay varios maneras de crear arreglos multidimensionales, como   `np.eye` y `np.identity`, ambas crean una matriz identidad, esencial en álgebra lineal. 
+
+
+
+También veremos como realizar  operaciones básicas en NumPy como suma, resta, multiplicación y división en arreglos. Estas operaciones se realizan elemento a elemento de manera automática, lo que significa que se tiene que escribir una iteración para poder hacerla.
+
+
+Un aspecto interesante de NumPy es la posibilidad de realizar operaciones 'en sitio'. Esto significa que puedes modificar un arreglo existente sin crear uno nuevo, lo cual es muy útil cuando un elemento se va modificando o le tenemos que aplicar alguna operación por una constante.
+
+
+Ahora vamos a la libreta a ver esto en la practica.

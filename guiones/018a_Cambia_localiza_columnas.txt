@@ -1,0 +1,11 @@
+
+Hola, en los próximos minutos  exploraremos cómo podemos renombrar las columnas de un DataFrame en Pandas, las mejores prácticas para nombrarlas y como localizar columnas usando list comprehension en la práctica.
+
+Renombrar columnas en un DataFrame no solo mejora la legibilidad, sino que también facilita el acceso y la manipulación de los datos durante el análisis. 
+Se recomienda renombrar las columnas para reflejar más claramente el contenido de los datos o para cumplir con las convenciones de nombramiento que facilitan la escritura de código más limpio y mantenible.
+
+Una buena práctica es utilizar nombres descriptivos pero concisos, evitando espacios y caracteres especiales. Esto previene errores al llamarlas y facilita realizar operaciones en pandas.
+
+Mantener un estándar de nomenclatura consistente, como camelCase o snake_case, es vital para la coherencia a lo largo de múltiples conjuntos de datos y proyectos.
+
+vamos ahora a la libreta de Jupyter.

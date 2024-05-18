@@ -1,0 +1,28 @@
+Hola, en esta ocasión exploraremos un tema de organizaci'on que es clave en los proyectos de análisis de datos: el espacio de trabajo 
+
+
+
+Primero, el espacio de trabajo. Imagínalo como la base física de tu proyecto. Consiste en una carpeta en tu computadora con una estructura de acuerdo al proyecto . Es importante usar nombres claros y sin caracteres especiales como acentos, eñes, ni espacios y que los nombres estén relacionados directamente con tu proyecto. En esta carpeta, incluye carpetas específicas para tus libretas de Jupyter, datos, y otras que necesites añadir según tu proyecto evolucione. Esta organización no solo facilita la localización de archivos, sino que también asegura la compatibilidad entre diferentes sistemas operativos, promueve la reproducibilidad y el trabajo colaborativo.
+
+Te voy a presentar dos ejemplos de espacios de trabajo ligeramente diferentes y con elementos en común.
+
+
+Primero, empiezo con un folder con el nombre el proyecto, por ejemplo, un análisis estrategias bioclimáticas para la ciudad de Toluca,
+casaToluca/
+  epw/
+  notebooks/
+  idf/
+  osm/
+  resultados/
+
+Para mis proyectos de datos, por ejemplo, para un análisis de clima de una ciudad,
+climaTemixco/
+  notebooks/
+    paquete/
+  data/
+    001_raw/
+    002_intermedios/
+    003_final/
+
+
+Desarrolla tu concepto de espacio de trabajo, perfeccionalo, y usalo en todos tus proyectos.

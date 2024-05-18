@@ -1,0 +1,14 @@
+
+"En este video vamos a hablar sobre  `meshgrid`. `Meshgrid` es una función que nos permite crear mallas de coordenadas, las cuales son esenciales en la visualización de datos y análisis en tres dimensiones.
+
+
+`Meshgrid` toma dos o más vectores de una dimensión y genera matrices de coordenadas. Por ejemplo, si tenemos dos vectores, uno para el eje X y otro para el eje Y, `meshgrid` nos dará dos matrices: una para todas las coordenadas X y otra para las Y.
+
+
+Esto es especialmente útil en gráficos 2D, donde queremos examinar una función a lo largo de un plano. Con `meshgrid`, podemos evaluar fácilmente funciones en un rango de valores y visualizar estos datos en un formato estructurado y claro.
+
+
+Pero `meshgrid` no se limita a 2D. También es una herramienta poderosa para crear mallas o superficies en tres dimensiones. Esto abre un mundo de posibilidades para visualizar funciones matemáticas complejas o datos en el espacio 3D.
+
+
+Vamos a ver esto en la libreta de Jupyter.

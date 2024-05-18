@@ -1,0 +1,16 @@
+
+
+"Hola, ¿sabías que puedes usar NumPy para manipular imágenes? Sí, esta biblioteca de Python te permite cargar y hacer calculos con la información contenida en imagenes. 
+
+
+
+NumPy se puede utilizar para alterar y analizar imágenes. Las imágenes, en su forma más básica, son solo arreglos de píxeles, y cada píxel tiene valores numéricos. Aquí es donde NumPy entra en acción.
+
+
+
+Al trabajar con imágenes, las cargamos como arreglos multidimensionales. Esto nos permite realizar operaciones complejas con facilidad, como ajustes de color, filtrado, y transformaciones.
+
+
+En este caso usaremos NumPy junto con Matplotlib y PIL (Python Imaging Library). Matplotlib es excelente para visualizar los cambios realizados, mientras que PIL facilita la carga de diferentes formatos de imagen.
+
+Vamos a la libreta de Jupyter para cargar una imagen y darle un primer vistazo.

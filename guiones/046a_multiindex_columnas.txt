@@ -1,0 +1,6 @@
+En el análisis de datos con pandas, un concepto que puede ayudarte a organizar tus datos es el multiíndice, o índice jerárquico, que nos permite tener múltiples niveles de índices en DataFrames. Esta característica es especialmente útil para organizar datos complejos de manera más eficiente al facilitar su accesibilidad.
+
+Cuando aplicamos multiíndices a las columnas de un DataFrame, podemos agrupar variables relacionadas bajo un mismo índice superior. Por ejemplo, en un conjunto de datos de series temporales, podríamos tener diferentes medidas, como temperatura, humedad y presión, registradas en diferentes lugares y creando un multiindice para las mediciones de un lugar, podemos distinguirlas facilmente de las de otro punto.
+
+Vamos a ver como usar multi indices para agrupar columnas en series temporales:
+

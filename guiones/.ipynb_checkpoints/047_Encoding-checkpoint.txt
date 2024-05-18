@@ -1,0 +1,13 @@
+Hola a esta sesión donde hablaremos sobre el encoding y su  importancia al importar datos con Pandas, la librería de Python para análisis de datos.
+
+
+El encoding, o codificación de caracteres, es el proceso por el cual los caracteres de texto se representan en formatos digitales. Existen varios tipos, como UTF-8 y Latin1. Por ejemplo, hay encodings que no contienen la letra eñe. Hoy en día, el encoding más común es el UTF-8.
+
+Al importar datos con Pandas, especificar correctamente el encoding es vital para asegurar que los caracteres especiales se importen correctamente.
+Sin el encoding adecuado, podríamos encontrarnos con errores de 'caracteres no reconocidos' o datos corruptos, especialmente al trabajar con idiomas que usan caracteres especiales.
+
+Siempre verifica el encoding de tu archivo de datos antes de importarlo. Pandas permite especificar el tipo de encoding mediante el argumento 'encoding' en funciones como 'read_csv'."
+
+En windows podemos conocer el encoding de un archivo usando Notepad++, un editor de texto de licencia abierta que te presentaremos.
+
+Vamos a conocer Notepad++ y ver como identificar y cambiar el encoding si fuera necesario.

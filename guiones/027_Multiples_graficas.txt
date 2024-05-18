@@ -1,0 +1,10 @@
+
+Hola, en este video, vamos a crear una gráfica múltiple con la función `plt.subplots()` de Matplotlib.
+
+Comenzaremos configurando nuestra figura y ejes, donde cada eje representa un espacio único para un gráfico individual.
+
+Utilizando `plt.subplots()`, organizaremos nuestros gráficos en una disposición estructurada, perfecta para visualizar nuestros resultados y buscar correlaciones de manera visual.
+
+Cada subplot se personalizará, ajustando escalas, estilos, etiquetas y nombres de ejes para maximizar la claridad y el impacto visual.
+
+Vamos a la libreta de Jupyter para ver todo esto.

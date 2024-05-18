@@ -1,0 +1,3 @@
+Hola, en este videos veremos como crear un multi indice en el nivel del índice con series temporales. Al crear un multi indice estamos creando un nivel jerarquico para acceder a la información, entonces si creamos un segundo nivel, primero tenemos que acceder o reordenar los niveles para ir accediendo a los datos.
+
+Veamos esto en la libreta y los datos de los casos blanco y negro.

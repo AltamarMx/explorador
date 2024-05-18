@@ -1,0 +1,20 @@
+ Hola, en esta semana 2 de nuestro  curso  exploraremos una de las herramientas más poderosas en el mundo de la ciencia de datos, la visualización y por supuesto que lo haremos con Matplotlib. 
+
+
+ Comenzaremos nuestra semana conociendo   Matplotlib,   una biblioteca en Python que nos permite crear desde visualizaciones sencillas hasta visualizaciones interactivas o esa grafica lista para acompañar tu tesis, artículo o libro. Visualizar nuestros datos nos permite descubrir patrones y tendencias en nuestros datos.
+
+Para comenzar a dominar Matplotlib y el arte de visualizar, comenzaremos con la "Anatomía de una Gráfica". Entender la estructura de un gráfico es fundamental para personalizar y ajustar su apariencia de manera precisa.
+
+Después, aprenderemos sobre el "Concepto de Figura y Ejes o fig y axis. Esto nos permitirá crear múltiples gráficos en la misma figura y controlar su disposición y sus elementos asociados.
+
+Continuaremos explorando  los "Tipos de Gráficas" que podemos crear con Matplotlib, que nos brinda una amplia variedad de opciones para representar datos, desde gráficos de barras hasta gráficos de dispersión.
+
+Una vez familiarizados con Matplotlib, crearemos nuestra primera gráfica y veremos como visualizar series temporales de manera efectiva.
+
+A medida que avanzamos, descubriremos cómo "Personalizar Figuras". Tendremos la capacidad de ajustar colores, etiquetas y estilos que nos permiten hacer que nuestras visualizaciones sean más claras e informativas.
+
+También exploraremos cómo crear "Múltiples Gráficas" en una misma figura. Esto es esencial cuando deseamos comparar datos y patrones en diferentes conjuntos de información.
+
+Y para llevar nuestras habilidades al siguiente nivel, aprenderemos crear gráficas con arreglos avanzados utilizando  GridSpec.
+
+Por último, pero no menos importante, exploraremos algunas opciones para  hacer "Gráficas Interactivas", que permiten a los usuarios explorar y analizar datos de manera dinámica, lo que es valioso en aplicaciones web, análisis de datos avanzados e inclusive tableros de información.

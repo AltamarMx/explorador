@@ -1,0 +1,16 @@
+Por supuesto, aquí tienes un guion de 40 segundos sobre las herramientas de álgebra lineal en NumPy:
+
+---
+
+**Inicio:**
+
+En este video vamos a presentarte el  amplio conjunto de herramientas para álgebra lineal de Numpy.
+
+ NumPy no es solo para operaciones básicas de matrices y vectores, sino que es tiene muchas herramientas en el ámbito del álgebra lineal.
+
+
+
+Dentro de NumPy, encontramos funciones dedicadas a casi todas las necesidades del álgebra lineal. Desde la inversión de matrices y descomposición de valores singulares, hasta la resolución de sistemas de ecuaciones lineales y cálculos de autovalores y autovectores.
+
+
+Estas herramientas son cruciales en campos como la ciencia de datos, la física y la ingeniería, donde el manejo eficiente de grandes conjuntos de datos y matrices es fundamental, asi que vamos a la libreta de Jupyter para conocerlas directamente.

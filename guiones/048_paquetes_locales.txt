@@ -1,0 +1,12 @@
+Hola, en este video vamos a ver cuando y como pasar tus funciones de Python para que puedan ser llamadas como por ejemploel paquete  de pandas. A esto le llamaremos un paquete local.
+
+
+En el mundo de Python, un paquete local es esencialmente un directorio que contiene archivos `.py` con código Python, junto con un archivo especial llamado `__init__.py`. Este archivo, que puede estar vacío, señala a Python que el directorio debe tratarse como un paquete, permitiendo así la organización modular del código. Al agrupar funcionalidades relacionadas en módulos y paquetes, facilitamos la reutilización del código y mejoramos la claridad y el mantenimiento del proyecto.
+
+La creación de un paquete local se recomienda cuando tu proyecto crece en complejidad y comienzas a tener múltiples scripts o libretas de Jupyter que podrían beneficiarse de compartir funcionalidades comunes. Por ejemplo, si estás desarrollando un proyecto de análisis de datos que requiere funciones específicas de limpieza de datos, visualización, y análisis estadístico, agrupar estas funciones en módulos dentro de un paquete local no solo te ayuda a mantener tu código organizado, sino que también facilita la reutilización de código en diferentes partes de tu proyecto o incluso en proyectos futuros.
+
+Crear un paquete local también es útil para cuando quieras distribuir tu código a otros usuarios o proyectos, permitiendo una integración fácil y directa de tus módulos. La estructura modular de los paquetes fomenta prácticas de desarrollo de software sólidas, como la separación de responsabilidades y el encapsulamiento, lo cual es esencial para proyectos a gran escala o colaborativos.
+
+En resumen, si te encuentras copiando y pegando funciones entre diferentes scripts, o si tu proyecto comienza a ser difícil de manejar debido a su tamaño, es un buen momento para considerar la organización de tu código en un paquete local. Esto no solo aumentará la eficiencia de tu desarrollo sino que también hará que tu código sea más accesible y fácil de entender para otros.
+
+Ahora, vamos a la libreta de Jupyter para hacer un paquete local.

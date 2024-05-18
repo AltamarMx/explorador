@@ -1,0 +1,14 @@
+
+Hola, hoy vamos a hablar de `pd.read_csv()`, una poderosa función del paquete Pandas que te permite leer datos de archivos CSV de manera sencilla y directa.
+
+Un archivo CSV, que significa Valores Separados por Comas, puede contener delimitadores que van más allá de las comas, como tabulaciones o puntos, comas o cualquier caracter, y `pd.read_csv()` está listo para manejarlos todos.
+
+`pd.read_csv()` no solo es versátil por los delimitadores que acepta. Viene cargado de opciones para controlar cómo se leen los datos, desde saltar filas hasta importar  fechas.
+
+Cuando cargas un archivo con `pd.read_csv()`, el resultado es un DataFrame, una estructura de datos bidimensional que es como una tabla supercargada.
+
+Y hay más: ¿quieres usar una columna como índice directamente al cargar tus datos? Con `pd.read_csv()`, puedes hacerlo fácilmente con el parámetro `index_col`.
+
+En resumen, `pd.read_csv()` es la llave  para importar datos de un archivo CSV a DataFrames, preparando el escenario para que desates todo el poder de análisis de Pandas.
+
+Vamos a la libreta para ver como funciona esto que hemos platicado.

@@ -1,0 +1,20 @@
+
+Hola,  Hoy vamos a explorar cómo visualizar Pairwise data, o datos por pares, utilizando Matplotlib y las distintas formas de gráficos disponibles.
+
+Comenzamos con el gráfico `plot`, el más conocido. Este gráfico de líneas es ideal para mostrar la relación y tendencias a lo largo del tiempo entre dos variables cuantitativas.
+
+El gráfico `scatter` es esencial para Pairwise data, perfecto para examinar la relación y la distribución entre dos dimensiones distintas, poniendo de relieve la densidad y la agrupación de los puntos de datos.
+
+Los gráficos de barras `bar` nos ayudan a comparar datos por pares entre diferentes categorías, mostrando claramente las diferencias en magnitud y permitiendo comparaciones rápidas entre grupos.
+
+El `stem`, o gráfico de tallo y hojas, es menos común pero útil para resaltar las variaciones y distribuciones de los datos por pares, a menudo utilizado en señales y sistemas para mostrar la magnitud de los datos respecto a una línea base.
+
+`fill_between` es una técnica poderosa para mostrar la diferencia o área entre dos series de datos por pares, proporcionando una representación visual del rango y la disparidad entre las series.
+
+El gráfico `stackplot` o gráfico apilado nos permite visualizar la acumulación o la composición de datos por pares a lo largo del tiempo, mostrando cómo contribuye cada par a un total.
+
+Finalmente, el gráfico `stairs` es una adición reciente que nos ofrece otra forma de visualizar datos escalonados por pares, similar a los histogramas pero con la claridad de los cambios paso a paso.
+
+Cada uno de estos gráficos ofrece una perspectiva única de los Pairwise data, permitiéndonos descubrir y comunicar las relaciones ocultas en nuestros conjuntos de datos con claridad y precisión.
+
+Vamos ahora a verlos a la libreta de Jupyter.

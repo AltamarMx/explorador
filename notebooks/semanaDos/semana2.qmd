@@ -1,0 +1,13 @@
+## Semana Dos
+
+
+En esta semana aprenderas:
+
+1. Familiarizarte con la anatomía de una gráfica en Matplotlib.
+1. Entender el concepto de figuras y ejes (fig y axis) para crear múltiples gráficos en la misma figura y controlar su disposición y elementos asociados.
+1. Explorar los diferentes tipos de gráficas que se pueden crear con Matplotlib, desde gráficos de barras hasta gráficos de dispersión.
+1. Crear la primera gráfica y aprender a visualizar series temporales de manera efectiva.
+1. Aprender a personalizar figuras ajustando colores, etiquetas y estilos para hacer que las visualizaciones sean más claras e informativas.
+1. Explorar cómo crear múltiples gráficas en una misma figura para comparar datos y patrones en diferentes conjuntos de información.
+1. Aprender a crear gráficas con arreglos avanzados utilizando GridSpec.
+1. Explorar opciones para hacer gráficas interactivas, permitiendo a los usuarios explorar y analizar datos de manera dinámica, útil en aplicaciones web, análisis de datos avanzados y tableros de información.

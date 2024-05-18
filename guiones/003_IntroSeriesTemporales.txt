@@ -1,0 +1,14 @@
+`0:00 a 0:10]
+Bienvenidas y bienvenidos al tema de las series temporales, un elemento clave en la ciencia de datos, de la ingeniería y de este curso.
+
+Una serie temporal se compone de dos elementos esenciales: momentos en el tiempo y los valores correspondientes. Imagina cada punto de datos como un evento en la historia, con su sello de tiempo y su medida, que puede ser numérica o de otro tipo.
+
+En la biblioteca Pandas de Python, estas series se manejan con maestría. La parte temporal suele definirse como índice aunque no necesariamente tiene que ser así.
+
+Los valores, por otro lado, son la esencia de nuestra serie. En Pandas, estos pueden ser desde números que rastrean el precio de una acción hasta categorías que representan estados del tiempo, datos de temperatura, consumo energético, niveles de radiación solar o radiación UV y todo lo que puedas imaginarte.
+
+En Pandas, recomendamos tratar fechas como objetos datetime, lo que nos permite realizar muchas operaciones de manera muy fácil. Tener las fechas en formato datetime es crucial y nos abre un mundo de posibilidades con muy poco código.
+
+Lo poderoso de Pandas es su habilidad para manejar las fechas, permitiéndonos cortar, desplazar y resumir el tiempo con facilidad. Así, podremos comparar períodos, medir duración de eventos y desplazar series en el tiempo con una simple línea de código.
+
+Al tener los tiempos como objetos datetime, Pandas nos da el poder de manipular el tiempo con la misma facilidad que manipulamos los números, permitiéndonos convertir el tiempo en una dimensión analítica más en nuestra caja de herramientas de ciencia de datos.

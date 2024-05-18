@@ -1,0 +1,18 @@
+
+
+Hola, en esta sesión comenzaremos a realizar gráficos con Matplotlib, la biblioteca  de visualización  más usada de Python, y cómo podemos utilizarla para crear gráficos usando dos enfoques distintos.
+
+Para un trazado rápido y fácil, `plt.plot()` es la función a la que muchos recurren. Con una simple línea de código, podemos pasar nuestros datos y ver inmediatamente un gráfico en la pantalla. 
+
+Pero cuando necesitamos más control y personalización, entran en juego `fig` y `ax`. Estos objetos son la clave de la interfaz orientada a objetos de Matplotlib.
+
+`fig` es la figura completa, el lienzo en el que eventualmente se dibujará nuestro gráfico. Podemos pensar en él como el marco general que contiene todos los elementos de la visualización.
+
+Por su parte, `ax` representa los ejes de un gráfico y es donde realmente ocurre el trazado de los datos. Un objeto `ax` puede pertenecer a multiples figuras o tener muchos objetos ax.
+
+Cuando usamos `fig, ax = plt.subplots()`, estamos preparando nuestra figura y ejes de manera que podamos modificar y ajustar prácticamente cualquier aspecto del gráfico que estamos creando.
+
+Mientras que `plt.plot()` es ideal para gráficos rápidos, `fig, ax = plt.subplots()` nos da la flexibilidad para construir visualizaciones complejas y compuestas en una estructura más manejable.
+
+
+ahora vemos a importar un conjunto de datos y ver como se usa esto en la libreta de Jupyter.

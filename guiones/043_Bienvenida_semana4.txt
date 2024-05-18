@@ -1,0 +1,24 @@
+
+"Hola, Esta es la Semana 4, la última  de este curso, Python, de usuario a explorador de datos. En esta semana, nos enfocaremos en ampliar nuestras habilidades en la manipulación de datos y la estructuración de nuestro código, preparándonos para que puedas abordar proyectos reales y complejos. Vamos a explorar herramientas avanzadas y buenas prácticas que te ayudarán a tener un flujo de trabajo robusto y reproducible.
+
+"Iniciaremos hablando  sobre el concepto del espacio de trabajo, una base esencial para organizar y acceder eficientemente a nuestros proyectos y datos. Este concepto es crucial para tener proyectos robustos, reproducibles y facilmente corregibles y colaborativos.
+
+"Seguiremos con la importancia de la narrativa computacional en las libretas, destacando cómo la combinación de nombres de variables, orden de las libretas, documentación, crean una crea una narrativa en tus proyectos  que facilitan el entendimiento y la colaboración.
+
+Abordaremos en cómo concatenar archivos con pandas, una técnica vital para trabajar con conjuntos de datos grandes o divididos, permitiéndonos combinarlos en una sola estructura de datos para análisis más complejos."
+
+
+Exploraremos el uso de multiíndices tanto en las columnas como en los índices de series temporales, lo que nos permite manejar datos más complejos con facilidad, mejorando la organización y el acceso a subconjuntos de datos específicos.
+
+Discutiremos la importancia del encoding en la preparación o importación de nuestros datos, un paso fundamental para asegurar que nuestros datos sean interpretados correctamente por nuestras herramientas de análisis."
+
+"Veremos cómo desarrollar paquetes locales, permitiéndonos reutilizar y compartir nuestro código de manera eficiente, una habilidad crucial para cualquier científico de datos que busca modularizar y mejorar la calidad de sus proyectos.
+
+Haremos un repaso de las buenas prácticas en la ciencia de datos, desde la escritura de código limpio hasta la gestión eficaz de proyectos y datos, preparándonos para aplicar estas prácticas en nuestros futuros proyectos.
+
+
+Concluirán esta semana con un ejercicio final que resume las buenas prácticas aprendidas, poniendo a prueba su comprensión y habilidad para aplicar estos conceptos en un contexto práctico.
+
+Les ofreceremos recomendaciones de paquetes adicionales para explorar, ampliando su caja de herramientas y preparándolos para enfrentar desafíos más complejos en la ciencia de datos.
+
+Con esto concluiremos  nuestra cuarta semana de este curso, Python, de usuario a explorador de datos.

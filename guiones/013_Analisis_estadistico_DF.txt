@@ -1,0 +1,18 @@
+
+
+Hola, en este video comenzamos nuestro viaje por el análisis exploratorio de datos, destacando las acciones esenciales para entender mejor nuestros DataFrames.
+
+Podemos dar  una mirada rápida a las primeras y últimas entradas de nuestros datos, estableciendo una primera impresión vital sobre el contenido del DataFrame con head y tail
+
+A continuación, generamos un resumen de tendencias centrales, dispersión y forma de nuestras variables, capturando la esencia de los datos.
+
+Revisamos los tipos de datos de nuestras columnas para confirmar que cada una esté configurada correctamente para el análisis que queremos realizar.
+
+Determinamos la cantidad de valores únicos en cada columna para medir la diversidad y repetición de nuestros datos.
+
+Observamos la frecuencia con la que aparecen las diferentes categorías dentro de nuestras variables no numéricas, dándonos una idea clara de su distribución.
+
+Podemos identificar y contabilizar los datos faltantes en cada columna, lo cual es crucial para decidir cómo procesaremos nuestro DataFrame.
+
+
+vamos a la libreta a ver como se hace todo esto.

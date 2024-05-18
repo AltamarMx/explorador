@@ -1,0 +1,15 @@
+
+
+"Hola, en este video rápido vamos a explorar dos funciones de NumPy: `np.arange` y `np.linspace`. Aunque ambas son para crear arreglos, tienen diferencias importantes.
+
+
+Empecemos con `np.arange`. Esta función es similar a la función `range` de Python. Nos permite crear arreglos con valores que van desde un inicio hasta un final, con un paso específico. Por ejemplo, podemos crear un arreglo desde el 0 hasta el 9, incrementando de 2 en 2.
+
+
+
+Por otro lado, tenemos `np.linspace`. Esta función genera un arreglo de valores que están uniformemente espaciados entre un valor de inicio y uno de fin. La clave aquí es que especificamos el número total de elementos que queremos, por ejemplo, podemos crear un arreglo que inicia en 0, termina en 100 y si le decimos que queremos cinco elementos, numpy calculará cada uno de los elementos.
+
+La diferencia principal es que `np.arange` trabaja con pasos, mientras que `np.linspace` se enfoca en la cantidad total de elementos. Elegir entre uno y otro depende de tus necesidades específicas en la manipulación de datos.
+
+
+Vamos a la libreta para ver esto en acción.

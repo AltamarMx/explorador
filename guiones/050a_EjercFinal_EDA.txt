@@ -1,0 +1,7 @@
+Hola, en los siguientes tres videos haremos un ejercicio final aplicando las buenas practicas recomendadas en este curso.
+
+El problema es el siguiente. Tenemos dos archivos con datos en formato csv, cada archivo corresponde a una torre de termopares que mide temperatura cada minuto con 12 puntos. Se quiere graficar en el tiempo la temperatura promedio cada 10 minutos de esos 12 puntos de cada torre.
+
+Este problema está dividido en 3 videos. En el primero vamos a hacer una exploración rápida de los datos para decidir como los vamos a limpiar al importar. En el segundo video los importamos, limpiamos y dejamos listos para el análisis. Y en el tercer video, simplemente los cargamos y obtenemos la gráfica con la tempratura promedio de los 12 puntos de cada torre para cada 10 minutos.
+
+Vamos a comenzar con la primera parte.

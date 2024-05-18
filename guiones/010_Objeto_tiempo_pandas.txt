@@ -1,0 +1,19 @@
+
+
+Hola, en los próximos minutos vamos a explorar los tipos de objetos de tiempo en Pandas que son esenciales para trabajar con series temporales.
+
+Primero está el objeto que ya hemos estado usando `datetime64` del indice, que es una colección de puntos en el tiempo y se utiliza a menudo como índice en estructuras de datos de Pandas.
+
+
+Tambi'en est'a `Timestamp`, este es el núcleo de la gestión del tiempo en Pandas y representa un punto específico en el tiempo, hasta nanosegundos. Es más flexible y está diseñada para integrarse mejor con el resto de las funcionalidades de Pandas.
+
+Luego tenemos `DateOffset`, que es útil para realizar ajustes de fechas y horas, permitiendo incrementar o disminuir fechas según períodos de tiempo definidos.
+
+El `Timedelta` es otro objeto importante. Representa la diferencia en tiempo entre dos puntos `datetime` y es fundamental para cálculos de duración y períodos.
+
+Existe también el objeto `Period`, que representa un intervalo de tiempo fijo, como un día o un mes, lo que es útil para modelar períodos que no cambian independientemente de cuando se observe.
+
+`Timedelta` es un intervalo de tiempo, uno de mis objetos favoritos, pues una fecha menos otra fecha es un intervalo, pero un intervalo más una fecha, es una fecha.
+
+
+Estos objetos son fundamentales en Pandas para crear, manipular y analizar datos basados en tiempo de forma precisa y eficiente, vamos a verlos en la libreta.

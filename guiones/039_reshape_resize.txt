@@ -1,0 +1,12 @@
+
+"Hola, en este video vamos a abordar dos funciones muy útiles de NumPy: `reshape` y `resize`. Ambas modifican la forma de los arreglos pero tienen diferencias importantes y usos específicos.
+
+
+
+Comencemos con `reshape`. Esta función cambia la forma de un arreglo sin alterar sus datos. Por ejemplo, si tienes un arreglo de 12 elementos, puedes reorganizarlo como una matriz de 3x4, 2x6, o cualquier otra forma que tenga 12 elementos en total. `reshape` es ideal cuando quieres reorganizar los datos sin cambiar su cantidad o su orden.
+
+
+Por otro lado, `resize` cambia la forma del arreglo y ajusta el tamaño si es necesario. Si el nuevo tamaño es mayor al numero de datos, `resize` rellena el arreglo repitiendo los los datos. Si es menor, trunca los datos. Por ejemplo, puedes tomar un arreglo de 8 elementos y cambiarlo a una forma de 4x4, lo que añadirá elementos adicionales.
+
+
+vamos a la libreta para ver la sintaxis.

@@ -1,0 +1,10 @@
+
+"Hoy vamos a explorar tres atributos de los arreglos en NumPy: `ndim`, `shape`, y `size`.
+
+"Primero, hablemos de `ndim`. Este atributo nos dice el número de dimensiones de un arreglo. En NumPy, una dimensión se refiere a un nivel de arreglo. Por ejemplo, un vector es un arreglo de una dimensión, una matriz de 2 x 2,  es de dos dimensiones, y así sucesivamente.
+
+También tenemos `shape`. Este atributo es una tupla que representa la forma o la estructura del arreglo en cada dimensión. Por ejemplo, si tenemos una matriz de 3 filas y 4 columnas, el `shape` sería `(3, 4)`. Nos indica cuántos elementos hay en cada dimensión, lo cual es crucial para operaciones como el redimensionamiento o la indexación."
+
+"Por último, está `size`. Este atributo nos da el número total de elementos en el arreglo. Es, por lo tanto,  el producto de todos los elementos del `shape`.
+
+Vamos a ver esto en la libreta de Jupyter.

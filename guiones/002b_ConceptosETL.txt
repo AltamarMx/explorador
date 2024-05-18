@@ -1,0 +1,14 @@
+
+
+Bienvenidas, bienvenidos y bienvenides. Hoy nos sumergiremos en el corazón de la ciencia de datos: el proceso ETL,
+que hace referencia a Extraction, Transformation y Loading o Extracci'on, Transformaci'on y Carga, respectivamente.
+
+Empezamos con la "E" de Extracción. Aquí es donde nuestra aventura de datos comienza, recopilando información de diversas fuentes como bases de datos, archivos CSV, o incluso grandes conjuntos de datos en línea. Esta etapa es crucial, como reunir las piezas de un gran rompecabezas.
+
+Siguiendo con la "T" de Transformación. Esta fase es el arte de dar forma a los datos. Se limpian, se organizan y se manipulan para descubrir patrones y tendencias. Aquí es donde usamos pandas y numpy, permitiéndonos transformar los datos para revelar la informaci'on que contienen.
+
+Finalmente, la "C" de Carga. Es el momento de trasladar nuestros datos transformados a un nuevo hogar, donde puedan ser consultados y analizados de manera r'apida. Este paso es como poner las piezas en su lugar, cargando los datos en sistemas que nos permiten explorarlos y compartirlos con el mundo o nuestro equipo.
+
+El proceso ETL es fundamental en la ciencia de datos, ya que nos permite convertir los datos crudos en información significativa. Dominar ETL significa tener la llave para desbloquear el potencial de los datos y tomar decisiones basadas en evidencias sólidas.
+
+Vamos a ver en una libreta de Jupyter como se ver'ia, esquematizado, este proceso.

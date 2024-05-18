@@ -1,0 +1,5 @@
+# Archivos CSV y XLSX 
+
+¿Cuándo usar CSV y cuándo usar XLSX? La mayoría de las veces no tienes opción de escoger, te dan el conjunto de datos en formatos diferentes y no te queda más que cargar tus datos desde ahí.
+
+Saber qué es cada uno de estos archivos es imprescindible. Muchas personas confunden un CSV por un archivo de una hoja de cálculo. Aprende las diferencias y aprende a importar cada uno de ellos.

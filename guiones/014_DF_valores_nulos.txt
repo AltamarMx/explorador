@@ -1,0 +1,13 @@
+Hola, en el siguiente minuto, vamos a hablar sobre los valores nulos y su importancia en la gestión de DataFrames en análisis de datos.
+
+Los valores nulos son esencialmente huecos en nuestro conjunto de datos, representan la ausencia de estos y pueden aparecer por muchas razones, como errores en la recopilación de datos o que la medición o pregunta no aplica. Por esto, tener conciencia de los valores nulos y visualizarlos es muy importante. Para esto vamos a usar un paquete que se llama missingno.
+
+
+Podemos manejar valores nulos de varias maneras: eliminándolos, imputando valores basados en otras observaciones, o a veces, dejándolos intactos si son significativos para el análisis.
+
+Cuando realizamos operaciones en un DataFrame, los valores nulos pueden propagarse y generar resultados inesperados. Por ejemplo, la suma de números con un valor nulo resultará en un valor nulo.
+
+Entender y tratar adecuadamente los valores nulos es fundamental para obtener resultados confiables en el análisis de datos. Es uno de los primeros pasos en la limpieza de datos y una habilidad esencial para cualquier analista de datos.
+
+
+ahora, vamos a la libreta para ver como manejarlos desde pandas.

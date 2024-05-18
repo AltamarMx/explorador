@@ -1,0 +1,16 @@
+
+
+Hola, en el próximo minuto, hablaremos sobre la etapa crucial del Análisis Exploratorio de Datos, conocida como EDA por Exploratory Data Analysis, en el proceso de ciencia de datos.
+
+El EDA es un enfoque analítico para entender y resumir el contenido de un conjunto de datos, observando las características principales y patrones contenidos en el conjunto.
+
+Una parte esencial del EDA es la visualización de datos. Gráficos como histogramas, gráficos de caja y diagramas de dispersión nos permiten ver la distribución y las relaciones entre variables.
+
+También calculamos estadísticas descriptivas, como la media, mediana y desviación estándar, para obtener una comprensión cuantitativa de nuestros datos.
+
+El EDA nos ayuda a identificar valores atípicos o anomalías que podrían influir en el análisis posterior o señalar errores de datos.
+
+En resumen, el EDA es el proceso de inspección inicial de los datos para formar hipótesis, detectar anomalías y patrones, y tomar decisiones informadas sobre los pasos siguientes en nuestro análisis.
+
+Vamos a ver en la libreta una visualización rápida de un conjunto de datos.
+

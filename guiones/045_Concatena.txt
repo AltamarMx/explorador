@@ -1,0 +1,7 @@
+Hola, en este video vamos a ver una herramienta para combinar dos o más dataframes,  la función `pd.concat` de Pandas y veremos como se usa en series temporales y su importancia de entender la opción `axis` y su efecto en la concatenación.
+
+Al utilizar `pd.concat`, podemos elegir concatenar a lo largo del eje de las filas (`axis=0`). En series temporales es común al unir series temporales de diferentes fuentes para crear una secuencia temporal continua. 
+
+Alternativamente, concatenar a lo largo del eje de las columnas (`axis=1`) nos permite combinar series temporales paralelas, manteniendo sus índices de tiempo sincronizados. Esto es  útil para juntar series temporales o construir conjuntos de datos con múltiples variables cronológicas.
+
+Ten cuidado al unir series temporales al usar  `pd.concat`, vamos a verlo con unos ejemplos en nuestra libreta de Jupyter

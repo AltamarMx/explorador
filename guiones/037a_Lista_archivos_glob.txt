@@ -1,0 +1,9 @@
+Hola, en este video vamos a ver como enlistar muchos archivos bajo diferentes condiciones para ser manipulados en Python.
+
+El paquete `glob` de Python es una herramienta poderosa y esencial para trabajar con archivos del sistema. Permite al usuario  buscar archivos en directorios utilizando patrones de coincidencia de caracteres, conocidos como "wildcards" o comodines. Por ejemplo podemos hacer que glob seleccione a todos los archivos con terminacion .txt 
+
+Esta capacidad hace de `glob` una herramienta indispensable para la automatización de tareas que involucran el manejo de múltiples archivos y directorios, especialmente cuando se trabaja con grandes conjuntos de datos o se necesita procesar archivos en lote. 
+
+Al utilizar `glob`, podemos simplificar significativamente el código necesario para listar archivos, leer o escribir en múltiples documentos y organizar nuestros datos de manera eficiente.
+
+vamos a la libreta de Jupyter como se usa glob.

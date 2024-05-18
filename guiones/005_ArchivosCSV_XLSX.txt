@@ -1,0 +1,24 @@
+
+Hola, hoy vamos a hablar de los archivos CSV y XLSX, dos formatos fundamentales en el mundo del análisis de datos y sus diferencias clave.
+
+Comencemos con el CSV, siglas de Valores Separados por Comas (comma separated values). Este formato de texto plano es editable con programas sencillos como Notepad++ o cualquier editor de texto, mostrando los datos de manera cruda y directa.
+
+Abrir archivo csv
+Nota que estoy abriendo este archivo con un Notepad++, un editor de texto libre y gratuito.
+
+
+Los XLSX, por otro lado, son la extensión propia de Microsoft Excel y requieren programas específicos con compatibilidad XLSX para ser abiertos y editados, como Excel mismo o alternativas compatibles como openoffice o libreoffice.
+ 
+ Abrir excel con hoja de calculo
+ Nota que estoy abriendo este archivo con una hoja de c'alculo.
+
+
+Los CSV son muy usados por su simplicidad y ligereza, lo cual facilita el intercambio de datos entre distintos programas y sistemas operativos sin perder su estructura y son ideales para programas que usan control de versiones. Notaras que un archivo que guarde la misma cantidad de datos en CSV requiere menos espacio que su equivalente en XLSX.
+
+En contraste, los archivos XLSX admiten una amplia gama de funcionalidades que van más allá del almacenamiento de datos: fórmulas, gráficos, y herramientas dinámicas como los macro, lo que también los puede volver peligrosos.
+
+La interoperabilidad es una gran diferencia: los CSV pueden ser utilizados prácticamente con cualquier herramienta de gestión de datos, mientras que los XLSX están diseñados para ser utilizados dentro de aplicaciones que soporten el formato XLSX.
+
+Escoger entre CSV y XLSX dependerá de tus necesidades: si buscas simplicidad y compatibilidad universal, CSV es la opción. Aunque sabemos que la vida no es perfecta, y muchas veces tendras datos en formato XLSX o te los pedirán en este formato.
+
+En este curso, te enseñaremos a manejar ambos, pero nuestra recomendación será siempre usar archivos csv.

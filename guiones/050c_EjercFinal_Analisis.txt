@@ -1,0 +1,1 @@
+Hola, en este video solo vamos a cargar los datos, prepararlos para graficar  y graficarlos, así que vamos a empezar.

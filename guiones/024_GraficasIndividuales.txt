@@ -1,0 +1,9 @@
+
+
+Hola,  En este video, vamos a ver como crear una gráfica rápida y senciila usando `plt.plot()` y `plt.scatter()` para traer nuestros datos a una representación gráfica.
+
+`plt.plot()` es LA herramienta para dibujar gráficos de líneas de manera muy rápida, pero la rapidez tiene un costo, y en este caso es que personalizar ese gráfico puede no ser tan fácil.
+
+plt.plot crea la figura directamente, por lo que no vas a tener un control absoluto sobre la figura o los ejes. 
+
+Vamos a ver como usar plt.plot y sus variantes en nuestra libreta de Jupyter.

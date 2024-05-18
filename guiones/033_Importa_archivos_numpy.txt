@@ -1,0 +1,11 @@
+
+"Hola, en este video exploraremos cómo cargar datos en NumPy, para empezar nos centraremos en dos funciones : `genfromtxt` y `loadtxt`. Ambas son esenciales para la cargar datos, pero con diferencias clave que debes conocer para usarlas adecuadamente."
+
+
+Comencemos con `loadtxt`. Esta función es la adecuada cuando se trata de archivos de texto simples y bien estructurados, es decir, donde cada línea tiene la misma cantidad de columnas, y no hay valores faltantes. `loadtxt` lee estos datos de manera rápida y eficiente. Es ideal para situaciones en las que la estructura de tus datos es uniforme."
+
+Ahora, pasemos a `genfromtxt`. Esta función es  es capaz de manejar valores faltantes en tu archivo? ¿Las líneas tienen diferentes números de columnas? ¿Necesitas especificar tipos de datos complejos? `genfromtxt` maneja todas estas situaciones con facilidad. Ofrece una flexibilidad increíble, permitiéndote cargar y manejar datos que no son uniformes en estructura."
+
+"Entonces, si tus datos son simples y uniformes, `loadtxt` será suficiente y  rápido. Pero si te enfrentas a datos más complejos o irregulares, `genfromtxt` será tu  opción, a pesar de que puede ser un poco más lenta debido a su flexibilidad."
+
+Vamos a la libreta de Jupyter para verlo en la practica.

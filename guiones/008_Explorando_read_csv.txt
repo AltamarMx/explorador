@@ -1,0 +1,20 @@
+
+
+Hola, vamos a revisar algunos de los parámetros más útiles de la función `pd.read_csv()` de Pandas y cómo nos ayudan a cargar datos.
+
+Comenzaremos con `sep` y `delimiter`, que nos permiten especificar el carácter que separa los valores en nuestro archivo CSV, asegurando que los datos se dividan correctamente en el DataFrame.
+
+El parámetro `header` nos indica qué fila del archivo CSV debe usarse para los nombres de las columnas del DataFrame, permitiendo ajustar o excluir los encabezados según sea necesario.
+
+Con `names`, podemos definir o reemplazar los nombres de las columnas del DataFrame, ofreciendo control sobre la identificación de cada columna de datos.
+
+Con skip_rows puedes decir el n'umero de renglones a saltarse o los renglones especificos en forma de lista
+
+`Index_col` establece una o más columnas como índice del DataFrame, proporcionando un método directo para referenciar y acceder a los datos.
+
+parse_dates nos ayuda a convertir el indice en formato de tiempo o datetime
+
+
+El parámetro `usecols` nos ayuda a seleccionar solo las columnas específicas que queremos cargar en el DataFrame, lo cual es útil para enfocarnos en segmentos particulares de datos y optimizar la memoria.
+
+Estos parámetros de `pd.read_csv()` son esenciales para una carga de datos efectiva y adaptada a nuestras necesidades específicas. A continuación, veremos cómo aplicar cada uno en una libreta de Jupyter.

@@ -1,0 +1,9 @@
+
+Hola, hoy vamos a revisar  por qué es crucial conocer y entender la anatomía de una figura en Matplotlib para cualquier persona que trabaje con visualización de datos.
+
+Conocer la anatomía de una figura es como aprender los componentes básicos de la gramática antes de escribir una novela; es el fundamento que nos permite construir visualizaciones comprensibles y efectivas.
+
+Entender cada parte de una figura, desde el 'Axes' hasta los 'Ticks', nos otorga el control total para personalizar nuestros gráficos, ajustándolos a nuestras necesidades específicas de análisis y formato.
+
+
+ahora, vamos a la libreta para ver la anatomia de una figura, junto con la documentacion de matplotlib.

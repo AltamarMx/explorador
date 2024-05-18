@@ -1,0 +1,3 @@
+Hola, en este video vamos a explorar cómo exportar figuras para un artículo o tesis con calidad de impresión, utilizando las bibliotecas de Python: Pandas y Matplotlib. Veremos cómo especificar las puntos por pulgada para garantizar que nuestras figuras sean nítidas y claras en cualquier formato de impresión. Además, te enseñaré cómo exportar estas figuras en dos formatos populares: PDF y PNG. Todo esto es esencial para presentar tus graficos de manera profesional en tus publicaciones. 
+
+Vamos a la libreta de Jupyter.

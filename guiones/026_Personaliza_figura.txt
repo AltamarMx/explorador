@@ -1,0 +1,6 @@
+Hola,
+en esta sesión vamos a hacer nuestra primera gráfica con más de un elemento completamente personalizada.
+
+Cambiaremos el tamaño por default, los estilos de líneas, agregaremos leyendas a los ejes y etiquetas a las gráficas y le daremos el toque final usando latex para que los simbolos salgan perfectos.
+
+Vamos a la libreta y pongamos manos a la obra.

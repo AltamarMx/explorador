@@ -1,0 +1,11 @@
+
+Saludos. Hoy vamos a descubrir cómo `ipywidgets` puede transformar las libretas de Jupyter en una experiencia interactiva.
+
+`Ipywidgets` son herramientas interactivas en HTML que nos permiten interactuar en tiempo real directamente dentro de nuestras libretas de Jupyter, y en este caso, con nuestros datos.
+
+Con simples deslizadores o sliders, botones y casillas de verificación, podemos explorar conjuntos de datos, 
+ajustar parámetros de visualización y mucho más, todo al alcance de un clic para proporcionar una experiencia interactiva.
+
+La interactividad es Ideal para la educación y la presentación de resultados, `ipywidgets` enriquece nuestras libretas, haciéndolas herramientas poderosas para el análisis exploratorio y la demostración de conceptos complejos.
+
+vamos a nuestra libreta de Jupyter para ver como hacer esto con nuestros datos.

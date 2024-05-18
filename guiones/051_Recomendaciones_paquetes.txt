@@ -1,0 +1,17 @@
+En este video te voy a recomendar algunos paquetes de Python, algunos son muy conocidos como Scipy y otros son librerias pequeñas que te ayudarán a visualizar series temporales.
+
+
+Vamos a comenzar
+
+Paquetes 
+1. Scipy
+1. Windrose https://github.com/python-windrose/windrose
+1. nbdev
+1. Seaborn
+1. Bokeh 
+1. Scikit-learn
+1. TensorFlow
+1. PyTorch
+1. Mercury 
+
+

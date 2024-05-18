@@ -1,0 +1,21 @@
+
+Hola, en esta sesión vamos a descubrir Matplotlib, la biblioteca o paquete de visualización de datos más popular  de Python.
+
+Matplotlib es una herramienta imprescindible para cualquier analista de datos, nos permite  crear gráficos y visualizaciones complejas. También nos permite crear visualizaciones animadas e interactivas.
+
+Con Matplotlib, podemos crear  desde histogramas y gráficos de barras hasta diagramas de dispersión y líneas, mapas de calor,  todos cruciales para el análisis exploratorio de datos.
+
+Lo que realmente hace destacar a Matplotlib es su capacidad de personalización. Podemos ajustar prácticamente cualquier elemento de un gráfico, desde colores y estilos hasta anotaciones, formato de fechas y construir cualquier grafica que tengamos en mente.
+
+Su integración con Pandas significa que podemos pasar directamente los DataFrames y Series a Matplotlib para visualizar nuestros datos con mínimas líneas de código.
+
+Matplotlib nos permite crear subplots complejos, organizando múltiples gráficos en una sola figura, lo que es ideal para comparar diferentes conjuntos de datos o variables.
+
+Además, facilita la exportación de gráficos en una variedad de formatos de archivo, lo que permite compartir fácilmente nuestros hallazgos con otros o integrarlos en informes,  presentaciones, tesis, artículos e incluso libros.
+
+Matplotlib cuenta con una comunidad de usuarios activa y una documentación extensa, donde los nuevos usuarios pueden aprender rápidamente, y los desarrolladores experimentados siempre encuentran soporte.
+
+En resumen, Matplotlib es una biblioteca de visualización esencial que ofrece tanto simplicidad para tareas rápidas como control profundo para visualizaciones personalizadas.
+
+
+Ahora, vamos a la libreta para instalar o actualizar matplotlib, según sea el caso.

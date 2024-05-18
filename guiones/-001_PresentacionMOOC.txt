@@ -1,0 +1,19 @@
+
+
+Estas buscando pasar de ser usuario de Python a explorador de datos?
+
+
+En este curso de usuario a explorador te daremos las herramientas para que lo logres.	
+ 
+Aprenderemos a manejar tareas mediante un enfoque ETL: Extracción, Transformación y Carga de datos. 
+
+Profundizaremos en pandas, una de las paqueterías más usadas en la ciencia de datos,  para que aprendas a manipular dataframes y series temporales, explorando archivos CSV y XLSX.
+
+Avanzaremos en visualización de datos con Matplotlib, donde aprenderán desde crear una gráfica simple hasta manejar gráficas múltiples e interactivas.
+
+También te presentaremos NumPy para  realizar operaciones avanzadas con arrays y manejo de datos numéricos.
+
+Para cerrar, consolidaremos tus habilidades en la gestión de proyectos de datos, desde el manejo avanzado de pandas hasta el desarrollo de paquetes propios, culminando con un proyecto final que encapsula todas las buenas prácticas aprendidas.
+
+
+Preparate para ser no solo usuarios de Python, sino una persona experta exploradora de datos con una metodología de trabajo robusta.

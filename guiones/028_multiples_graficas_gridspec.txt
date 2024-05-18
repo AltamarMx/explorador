@@ -1,0 +1,8 @@
+Hola,
+en esta sesión vamos a hacer una gráfica con gridspec.
+
+`GridSpec` de Matplotlib es la herramienta para  la creación de gráficos complejos  que nos permite definir una arreglo de gráficos con una flexibilidad inigualable.
+
+Con gridspec podemos especificar no solo la cantidad sino también el tamaño relativo y la ubicación de los subplots dentro de una figura.  Es perfecta para composiciones donde necesitamos que un gráfico ocupe más espacio que otro, o para alinear gráficos de manera no convencional.
+
+vamos a la libreta de Jupyter para hacer esto.

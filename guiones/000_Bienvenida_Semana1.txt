@@ -1,0 +1,9 @@
+¡Bienvenidas, Bienvenidos, bienvenides al curso de Python de usuario a explorador de  series temporales.
+
+ En esta primera semana, vamos a sumergirnos en el mundo de Python y las series temporales, además todo lo que requieres conocer para que inicies a explorar datos de manera robusta, reproducible, efectiva y preparandote para un trabajo colaborativo.
+
+Exploraremos los fundamentos de ETL, lo que significa Extract, Transform, Load, o Extraer, Transformar, Cargar y cómo se relaciona con el análisis de datos.Esta semana también incluirá una introducción a las series temporales, un componente importante en el análisis de datos, y para esto usaremos Pandas, la biblioteca esencial para la manipulación de datos en Python con ese objeto poderosísimo que es el DataFrame.
+
+Además, aprenderemos a leer y explorar archivos CSV y de Excel y abordaremos que es el indice de un dataframe y el objeto tiempo en pandas. Una vez que ya tengamos en un dataframe nuestros datos, continuaremos con operaciones básicas, localización y reemplazo de datos, e iniciaremos el viaje en el Análisis Exploratorio de Datos (EDA)  con estrategias rápidas para conocer nuestros datos, sin dejar de fuera como manejar valores nulos o faltantes.
+
+Así que, en resumen, esta semana será una inmersión completa en Python, Pandas y los datos del dataframe.

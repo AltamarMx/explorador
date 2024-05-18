@@ -1,0 +1,15 @@
+
+Hola, en este video vamos a explorar cómo podemos utilizar herramientas poderosas como NumPy, PIL, Matplotlib y glob para analizar imágenes de flujos de fluidos.
+
+
+Este es el problema, tenemos un conjunto de imágenes que muestran la magnitud de la velocidad de un flujo pasando un obstáculo. Cada imagen representa diferentes instancias de tiempo y nos ayudará a entender la dinámica del flujo.
+Queremos reunir todas las imagenes en tres arreglos, un arreglo por cada canal.
+
+
+Primero, usaremos 'glob' para localizar y listar todas nuestras imágenes. Luego, con la ayuda de PIL, una biblioteca de manejo de imágenes, cargaremos estas imágenes en Python.
+
+Cada imagen tiene cuatro canales. Utilizaremos NumPy para procesar estas imágenes. NumPy nos permite calcular fácilmente el promedio de los valores de los píxeles de todos los canales de la imagen.
+
+Finalmente, usaremos Matplotlib para visualizar cada arreglo y verificar que lo hemos hecho bien.
+
+Vamos a la libreta de Jupyter para hacer esto.

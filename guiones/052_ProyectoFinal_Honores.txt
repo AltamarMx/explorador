@@ -1,0 +1,8 @@
+
+Bienvenidos a la fase culminante de su formación. Para graduarse con honores, enfrentaras un desafío integral que pone a prueba todas las habilidades que has desarrollado en el curso. El proyecto final consistirá en la importación y concatenación de datos de diversas fuentes, una tarea esencial en el análisis de datos moderno.
+
+Deberas desarrollar un paquete en Python específicamente diseñado para automatizar estos procesos. Este paquete deberá facilitar no solo la transformación de datos, sino también asegurar que tu flujo de trabajo sea reproducible.
+
+Es crucial que implementes espacio de trabajo adecuado, siguiendo las mejores prácticas de programación y narrativa computacional. Tu e espacio de trabajo  promueve la organización, facilita la iteración rápida de ideas y la colaboración, puntos claves para el trabajo moderno.
+
+Este proyecto final no solo demostrará tus habilidades técnicas, sino también tu capacidad para aplicar estas habilidades de manera efectiva en situaciones del mundo real. Al completar este proyecto con éxito, no solo te graduaras, sino que lo harás con honores.

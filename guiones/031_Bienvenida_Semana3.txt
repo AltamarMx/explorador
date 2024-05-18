@@ -1,0 +1,19 @@
+
+"Hola, en esta Semana 3 de nuestro curso, nos enfocaremos en conocer  NumPy, que es una abreviación de Numerical Python, y es  una biblioteca esencial para la computación científica en Python.
+
+"Empezaremos con una introducción a NumPy y su elemento fundamental: los arrays o arreglos. NumPy nos permite crear y manipular arreglos de datos de manera eficiente. Veremos cómo estos arreglos son más potentes y flexibles que las listas tradicionales de Python al momento de hacer operaciones matemáticas.
+
+También aprenderemos a importar archivos con NumPy, lo que nos permite cargar datos desde diferentes fuentes para su análisis o manipulación. 
+
+"Exploraremos los atributos y propiedades de los arrays, como su forma y tamaño para despues  ver  las operaciones básicas con arrays, incluyendo cálculos aritméticos. También aprenderemos  a extraer subconjuntos de datos con  el concepto de slicing.
+
+Las imagenes son arreglos multidimensionales, aprender a manejarlas  nos abrirá las puertas a trabajar con información contenida en las imágenes, por lo que  cargar imágenes  y procesar imagenes es imprescindible y te dará mucha experiencia.
+
+
+Aprenderemos a crear datos con  arange y linspace y en este punto abordaremos como transformar esos datos cambiando su forma, habilidad imprescindible en la ciencia de datos.
+
+Abordaremos cómo guardar nuestros datos procesados con NumPy y también exploraremos Meshgrid, una herramienta invaluable para crear mallas de coordenadas, esencial en la visualización de datos y en la simulación de fenómenos físicos.
+
+
+"Finalmente, abordaremos las herramientas de NumPy para álgebra lineal, que son fundamentales para la modelación matemática y la solución de sistemas de ecuaciones y otras áreas como el machine learning.
+

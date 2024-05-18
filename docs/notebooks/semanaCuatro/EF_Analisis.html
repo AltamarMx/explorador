@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Python: De usuario a explorador de datos - 51&nbsp; Ejercicio Final - Parte 3: Preparación y visualización de datos</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../notebooks/semanaCuatro/Paquetes.html" rel="next">
+<link href="../../notebooks/semanaCuatro/EF_LimpiezaDatos.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Python: De usuario a explorador de datos</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+    <a href="https://github.com/altamarmx/explorador/" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Buscar"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/semanaCuatro/semana4.html">Semana Cuatro</a></li><li class="breadcrumb-item"><a href="../../notebooks/semanaCuatro/EF_Analisis.html"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Ejercicio Final - Parte 3: Preparación y visualización de datos</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../img/python.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bienvenida</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">Recomendaciones y datos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../uso.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Recomendaciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Datos para el curso</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../notebooks/semanaUno/semana1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Semana Uno</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/funciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Funciones en Python</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/ETL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Extracción, tranformación y carga</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/Intro_series_temporales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introducción a las series temporales</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/Intro_pandas_dataframe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introducción a Pandas y DataFrames</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/archivos_csv_xlsx.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Archivos CSV y XLSX</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/read_csv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lectura de archivos csv</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/read_excel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Lectura de archivos XLSX</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/explorando_read_csv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Explorando las opciones de read_csv</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/indice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">El índice en series temporales</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/datetime_pandas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">El objeto datetime en Pandas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/columnas_renglones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Localiza columnas y renglones</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/Intro_EDA.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">EDA: Explora visualmente tus datos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/AnalisisEstadistico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Exploración de los datos en tu DataFrame</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/ValoresNulos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Valores nulos en datos y DataFrames</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/Operaciones_basicas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Operaciones básicas con DataFrames</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/uso_loc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Localizar y reemplazar información en Pandas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/warnings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Warnings</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/manejo_columnas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Cambia y localiza nombres de columnas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaUno/cambia_frecuencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Cambia la frecuencia de tus datos</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../notebooks/semanaDos/semana2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Semana Dos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaDos/IntroMatplotlib.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Introducción a Matplotlib</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaDos/Anatomy_of_a_figure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Anatomía de una gráfica</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaDos/fig_ax.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Concepto de figuras y ejes (fig, ax)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaDos/Tipos_graficos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Tipos de gráficas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaDos/graficas_individuales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Gráficas individuales</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaDos/mi_primera_figura.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Mi primera gráfica temporal</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaDos/personaliza_figura.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Personaliza tus figuras</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaDos/multiples_graficas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Múltiples gráficas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaDos/gridspec.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Múltiples gráficas con patrones complejos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaDos/graficas_interactivas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Gráficas interactivas con ipywidgets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaDos/prepara_figura.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Prepara tu figura para publicación</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../notebooks/semanaTres/semana3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Semana Tres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaTres/Instala_Numpy_array.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Introducción a NumPy y arrays</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaTres/Carga_datos_numpy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Importar archivos con NumPy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaTres/caracteristicas_arrays.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Atributos y propiedades de arrays</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaTres/Operaciones_basicas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Operaciones básicas con arrays</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaTres/Slicing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Slicing y fancy indexing en NumPy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaTres/imagenes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Manipula imagenes con NumPy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaTres/glob.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Manejo de multiples archivos con glob</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaTres/carga_flujo_obstaculo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Flujo de trabajo en NumPy con imagenes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaTres/linspace_arange.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Creando intervalos con arange y linspace</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaTres/reshape.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Manipulación de los arreglos de NumPy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaTres/guarda_numpy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Guardar datos en NumPy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaTres/meshgrid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Mallas para cálculos numéricos con NumPy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaTres/Algebra_lineal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Herramientas para álgebral lineal</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../notebooks/semanaCuatro/semana4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Semana Cuatro</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaCuatro/concatena.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Concatena archivos con Pandas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaCuatro/multiindex_columnas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Multi-índice en las columnas de series temporales</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaCuatro/multiindex_indice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Multi-índices en las columnas de series temporales</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaCuatro/Encoding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">El encoding</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaCuatro/paquetes_locales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Desarrolla paquetes locales</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaCuatro/EF_EDA.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Ejercicio Final - Parte 1: exploración visual de datos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaCuatro/EF_LimpiezaDatos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Ejercicio Final - Parte 2: Limpieza de datos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaCuatro/EF_Analisis.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Ejercicio Final - Parte 3: Preparación y visualización de datos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/semanaCuatro/Paquetes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Recomendaciones de paquetes a explorar</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../creditos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Créditos</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/semanaCuatro/semana4.html">Semana Cuatro</a></li><li class="breadcrumb-item"><a href="../../notebooks/semanaCuatro/EF_Analisis.html"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Ejercicio Final - Parte 3: Preparación y visualización de datos</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Ejercicio Final - Parte 3: Preparación y visualización de datos</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Bienvenidos a este video dedicado a simplificar el proceso de visualización de datos. En esta sesión, nos centraremos únicamente en cargar los datos, prepararlos para la graficación y finalmente, graficarlos. Este enfoque directo nos permitirá obtener resultados rápidamente y sin complicaciones. Sin más preámbulos, ¡empecemos con el proceso de carga y graficación de datos!</p>
+<div id="9d743193" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dateutil.parser <span class="im">import</span> parse</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="d92c5f1b" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">'../data/termopares/Tcafe-12a17h.csv'</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>cafe <span class="op">=</span> pd.read_csv(f,index_col<span class="op">=</span><span class="dv">0</span>,parse_dates<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">'../data/termopares/Text-12a17h.csv'</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>ext <span class="op">=</span> pd.read_csv(f,index_col<span class="op">=</span><span class="dv">0</span>,parse_dates<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="38572aa9" class="cell" data-scrolled="false" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Ti <span class="op">=</span> pd.concat([cafe,ext],axis<span class="op">=</span><span class="dv">1</span>,keys<span class="op">=</span>[<span class="st">'cafe'</span>,<span class="st">'ext'</span>])</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Ti</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th colspan="10" data-quarto-table-cell-role="th" data-halign="left">cafe</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th colspan="10" data-quarto-table-cell-role="th" data-halign="left">ext</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">T1</th>
+<th data-quarto-table-cell-role="th">T10</th>
+<th data-quarto-table-cell-role="th">T11</th>
+<th data-quarto-table-cell-role="th">T12</th>
+<th data-quarto-table-cell-role="th">T2</th>
+<th data-quarto-table-cell-role="th">T3</th>
+<th data-quarto-table-cell-role="th">T4</th>
+<th data-quarto-table-cell-role="th">T5</th>
+<th data-quarto-table-cell-role="th">T6</th>
+<th data-quarto-table-cell-role="th">T7</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">T10</th>
+<th data-quarto-table-cell-role="th">T11</th>
+<th data-quarto-table-cell-role="th">T12</th>
+<th data-quarto-table-cell-role="th">T2</th>
+<th data-quarto-table-cell-role="th">T3</th>
+<th data-quarto-table-cell-role="th">T4</th>
+<th data-quarto-table-cell-role="th">T6</th>
+<th data-quarto-table-cell-role="th">T7</th>
+<th data-quarto-table-cell-role="th">T8</th>
+<th data-quarto-table-cell-role="th">T9</th>
+</tr>
+<tr class="header">
+<th data-quarto-table-cell-role="th">ts</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-04-03 12:00:00</td>
+<td>29.6670</td>
+<td>30.0330</td>
+<td>29.7210</td>
+<td>29.3180</td>
+<td>29.5245</td>
+<td>29.3590</td>
+<td>29.3670</td>
+<td>29.1675</td>
+<td>29.1310</td>
+<td>-8.96</td>
+<td>...</td>
+<td>30.0330</td>
+<td>29.7210</td>
+<td>29.3180</td>
+<td>29.5245</td>
+<td>29.3590</td>
+<td>29.3670</td>
+<td>29.1310</td>
+<td>NaN</td>
+<td>29.2860</td>
+<td>30.5740</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-04-03 12:10:00</td>
+<td>29.6360</td>
+<td>29.9245</td>
+<td>29.6590</td>
+<td>29.3025</td>
+<td>29.4470</td>
+<td>29.3435</td>
+<td>29.3360</td>
+<td>29.0125</td>
+<td>28.9915</td>
+<td>-8.96</td>
+<td>...</td>
+<td>29.9245</td>
+<td>29.6590</td>
+<td>29.3025</td>
+<td>29.4470</td>
+<td>29.3435</td>
+<td>29.3360</td>
+<td>28.9915</td>
+<td>NaN</td>
+<td>29.1000</td>
+<td>30.5120</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-04-03 12:20:00</td>
+<td>30.5040</td>
+<td>30.9165</td>
+<td>30.6820</td>
+<td>30.2175</td>
+<td>30.3770</td>
+<td>30.1885</td>
+<td>30.2350</td>
+<td>29.9965</td>
+<td>29.9625</td>
+<td>-8.96</td>
+<td>...</td>
+<td>30.9165</td>
+<td>30.6820</td>
+<td>30.2175</td>
+<td>30.3770</td>
+<td>30.1885</td>
+<td>30.2350</td>
+<td>29.9625</td>
+<td>NaN</td>
+<td>30.1230</td>
+<td>31.4815</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-04-03 12:30:00</td>
+<td>30.5970</td>
+<td>30.9320</td>
+<td>30.6820</td>
+<td>30.2325</td>
+<td>30.5010</td>
+<td>30.2990</td>
+<td>30.2970</td>
+<td>30.0750</td>
+<td>30.0710</td>
+<td>-8.96</td>
+<td>...</td>
+<td>30.9320</td>
+<td>30.6820</td>
+<td>30.2325</td>
+<td>30.5010</td>
+<td>30.2990</td>
+<td>30.2970</td>
+<td>30.0710</td>
+<td>NaN</td>
+<td>30.1850</td>
+<td>31.5605</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-04-03 12:40:00</td>
+<td>31.3605</td>
+<td>31.6795</td>
+<td>31.4620</td>
+<td>30.9710</td>
+<td>31.1250</td>
+<td>30.9655</td>
+<td>30.9635</td>
+<td>30.7895</td>
+<td>30.8025</td>
+<td>-8.96</td>
+<td>...</td>
+<td>31.6795</td>
+<td>31.4620</td>
+<td>30.9710</td>
+<td>31.1250</td>
+<td>30.9655</td>
+<td>30.9635</td>
+<td>30.8025</td>
+<td>NaN</td>
+<td>30.9755</td>
+<td>32.2890</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-04-03 12:50:00</td>
+<td>30.9240</td>
+<td>31.2890</td>
+<td>31.0870</td>
+<td>30.6105</td>
+<td>30.8280</td>
+<td>30.6400</td>
+<td>30.6690</td>
+<td>30.3090</td>
+<td>30.3655</td>
+<td>-8.96</td>
+<td>...</td>
+<td>31.2890</td>
+<td>31.0870</td>
+<td>30.6105</td>
+<td>30.8280</td>
+<td>30.6400</td>
+<td>30.6690</td>
+<td>30.3655</td>
+<td>NaN</td>
+<td>30.5105</td>
+<td>31.8705</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-04-03 13:00:00</td>
+<td>30.8145</td>
+<td>31.1495</td>
+<td>30.9155</td>
+<td>30.5160</td>
+<td>30.6720</td>
+<td>30.4850</td>
+<td>30.5450</td>
+<td>30.2935</td>
+<td>30.3345</td>
+<td>-8.96</td>
+<td>...</td>
+<td>31.1495</td>
+<td>30.9155</td>
+<td>30.5160</td>
+<td>30.6720</td>
+<td>30.4850</td>
+<td>30.5450</td>
+<td>30.3345</td>
+<td>NaN</td>
+<td>30.4640</td>
+<td>31.7930</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-04-03 13:10:00</td>
+<td>32.0325</td>
+<td>32.5535</td>
+<td>32.3195</td>
+<td>31.8590</td>
+<td>31.9060</td>
+<td>31.7250</td>
+<td>31.7860</td>
+<td>31.5510</td>
+<td>31.5210</td>
+<td>-8.96</td>
+<td>...</td>
+<td>32.5535</td>
+<td>32.3195</td>
+<td>31.8590</td>
+<td>31.9060</td>
+<td>31.7250</td>
+<td>31.7860</td>
+<td>31.5210</td>
+<td>NaN</td>
+<td>31.7195</td>
+<td>33.0795</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-04-03 13:20:00</td>
+<td>32.2035</td>
+<td>32.6310</td>
+<td>32.3350</td>
+<td>31.9210</td>
+<td>32.0765</td>
+<td>31.9110</td>
+<td>31.8345</td>
+<td>31.7565</td>
+<td>31.7065</td>
+<td>-8.96</td>
+<td>...</td>
+<td>32.6310</td>
+<td>32.3350</td>
+<td>31.9210</td>
+<td>32.0765</td>
+<td>31.9110</td>
+<td>31.8345</td>
+<td>31.7065</td>
+<td>NaN</td>
+<td>31.7970</td>
+<td>33.2035</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-04-03 13:30:00</td>
+<td>32.2810</td>
+<td>32.7400</td>
+<td>32.4280</td>
+<td>32.0295</td>
+<td>32.1385</td>
+<td>31.9420</td>
+<td>31.9890</td>
+<td>31.7085</td>
+<td>31.7705</td>
+<td>-8.96</td>
+<td>...</td>
+<td>32.7400</td>
+<td>32.4280</td>
+<td>32.0295</td>
+<td>32.1385</td>
+<td>31.9420</td>
+<td>31.9890</td>
+<td>31.7705</td>
+<td>NaN</td>
+<td>31.9365</td>
+<td>33.2965</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-04-03 13:40:00</td>
+<td>32.0795</td>
+<td>32.5230</td>
+<td>32.2885</td>
+<td>31.9660</td>
+<td>32.0455</td>
+<td>31.8335</td>
+<td>31.8160</td>
+<td>31.5040</td>
+<td>31.5070</td>
+<td>-8.96</td>
+<td>...</td>
+<td>32.5230</td>
+<td>32.2885</td>
+<td>31.9660</td>
+<td>32.0455</td>
+<td>31.8335</td>
+<td>31.8160</td>
+<td>31.5070</td>
+<td>NaN</td>
+<td>31.7040</td>
+<td>33.0950</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-04-03 13:50:00</td>
+<td>32.8235</td>
+<td>33.3135</td>
+<td>33.0170</td>
+<td>32.5770</td>
+<td>32.7585</td>
+<td>32.5775</td>
+<td>32.5850</td>
+<td>32.3030</td>
+<td>32.2820</td>
+<td>-8.96</td>
+<td>...</td>
+<td>33.3135</td>
+<td>33.0170</td>
+<td>32.5770</td>
+<td>32.7585</td>
+<td>32.5775</td>
+<td>32.5850</td>
+<td>32.2820</td>
+<td>NaN</td>
+<td>32.5100</td>
+<td>33.8700</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-04-03 14:00:00</td>
+<td>33.2590</td>
+<td>33.6855</td>
+<td>33.5595</td>
+<td>33.0745</td>
+<td>33.1460</td>
+<td>32.9665</td>
+<td>33.0350</td>
+<td>32.6750</td>
+<td>32.6890</td>
+<td>-8.96</td>
+<td>...</td>
+<td>33.6855</td>
+<td>33.5595</td>
+<td>33.0745</td>
+<td>33.1460</td>
+<td>32.9665</td>
+<td>33.0350</td>
+<td>32.6890</td>
+<td>NaN</td>
+<td>32.8200</td>
+<td>34.3395</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-04-03 14:10:00</td>
+<td>33.7600</td>
+<td>34.1970</td>
+<td>34.0865</td>
+<td>33.5270</td>
+<td>33.6780</td>
+<td>33.4525</td>
+<td>33.5000</td>
+<td>33.1090</td>
+<td>33.1905</td>
+<td>-8.96</td>
+<td>...</td>
+<td>34.1970</td>
+<td>34.0865</td>
+<td>33.5270</td>
+<td>33.6780</td>
+<td>33.4525</td>
+<td>33.5000</td>
+<td>33.1905</td>
+<td>NaN</td>
+<td>33.3315</td>
+<td>34.8250</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-04-03 14:20:00</td>
+<td>33.5070</td>
+<td>33.8405</td>
+<td>33.6215</td>
+<td>33.2450</td>
+<td>33.3480</td>
+<td>33.1995</td>
+<td>33.2365</td>
+<td>32.8145</td>
+<td>32.8950</td>
+<td>-8.96</td>
+<td>...</td>
+<td>33.8405</td>
+<td>33.6215</td>
+<td>33.2450</td>
+<td>33.3480</td>
+<td>33.1995</td>
+<td>33.2365</td>
+<td>32.8950</td>
+<td>NaN</td>
+<td>32.9905</td>
+<td>34.4980</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-04-03 14:30:00</td>
+<td>34.4920</td>
+<td>34.9255</td>
+<td>34.7065</td>
+<td>34.1220</td>
+<td>34.4270</td>
+<td>34.1840</td>
+<td>34.1510</td>
+<td>33.9350</td>
+<td>33.9520</td>
+<td>-8.96</td>
+<td>...</td>
+<td>34.9255</td>
+<td>34.7065</td>
+<td>34.1220</td>
+<td>34.4270</td>
+<td>34.1840</td>
+<td>34.1510</td>
+<td>33.9520</td>
+<td>NaN</td>
+<td>34.1065</td>
+<td>35.4610</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-04-03 14:40:00</td>
+<td>34.4145</td>
+<td>34.7860</td>
+<td>34.5825</td>
+<td>34.1530</td>
+<td>34.2565</td>
+<td>34.0290</td>
+<td>34.1045</td>
+<td>33.7455</td>
+<td>33.8265</td>
+<td>-8.96</td>
+<td>...</td>
+<td>34.7860</td>
+<td>34.5825</td>
+<td>34.1530</td>
+<td>34.2565</td>
+<td>34.0290</td>
+<td>34.1045</td>
+<td>33.8265</td>
+<td>NaN</td>
+<td>33.9360</td>
+<td>35.4300</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-04-03 14:50:00</td>
+<td>34.4920</td>
+<td>35.0650</td>
+<td>34.9090</td>
+<td>34.4010</td>
+<td>34.4580</td>
+<td>34.2615</td>
+<td>34.2905</td>
+<td>33.9040</td>
+<td>34.0435</td>
+<td>-8.96</td>
+<td>...</td>
+<td>35.0650</td>
+<td>34.9090</td>
+<td>34.4010</td>
+<td>34.4580</td>
+<td>34.2615</td>
+<td>34.2905</td>
+<td>34.0435</td>
+<td>NaN</td>
+<td>34.0910</td>
+<td>35.6625</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-04-03 15:00:00</td>
+<td>35.0345</td>
+<td>35.5610</td>
+<td>35.4265</td>
+<td>34.9660</td>
+<td>34.9075</td>
+<td>34.7575</td>
+<td>34.7865</td>
+<td>34.3435</td>
+<td>34.4540</td>
+<td>-8.96</td>
+<td>...</td>
+<td>35.5610</td>
+<td>35.4265</td>
+<td>34.9660</td>
+<td>34.9075</td>
+<td>34.7575</td>
+<td>34.7865</td>
+<td>34.4540</td>
+<td>NaN</td>
+<td>34.6180</td>
+<td>36.1430</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-04-03 15:10:00</td>
+<td>35.1430</td>
+<td>35.5300</td>
+<td>35.2735</td>
+<td>34.9360</td>
+<td>35.0470</td>
+<td>34.8040</td>
+<td>34.8950</td>
+<td>34.6070</td>
+<td>34.6735</td>
+<td>-8.96</td>
+<td>...</td>
+<td>35.5300</td>
+<td>35.2735</td>
+<td>34.9360</td>
+<td>35.0470</td>
+<td>34.8040</td>
+<td>34.8950</td>
+<td>34.6735</td>
+<td>NaN</td>
+<td>34.7575</td>
+<td>36.2360</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-04-03 15:20:00</td>
+<td>34.9415</td>
+<td>35.2975</td>
+<td>35.1140</td>
+<td>34.6805</td>
+<td>34.8455</td>
+<td>34.6955</td>
+<td>34.6470</td>
+<td>34.4055</td>
+<td>34.5340</td>
+<td>-8.96</td>
+<td>...</td>
+<td>35.2975</td>
+<td>35.1140</td>
+<td>34.6805</td>
+<td>34.8455</td>
+<td>34.6955</td>
+<td>34.6470</td>
+<td>34.5340</td>
+<td>NaN</td>
+<td>34.5560</td>
+<td>35.9570</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-04-03 15:30:00</td>
+<td>35.4375</td>
+<td>35.7160</td>
+<td>35.5380</td>
+<td>35.0920</td>
+<td>35.3105</td>
+<td>35.1295</td>
+<td>35.1740</td>
+<td>34.8550</td>
+<td>34.9215</td>
+<td>-8.96</td>
+<td>...</td>
+<td>35.7160</td>
+<td>35.5380</td>
+<td>35.0920</td>
+<td>35.3105</td>
+<td>35.1295</td>
+<td>35.1740</td>
+<td>34.9215</td>
+<td>NaN</td>
+<td>35.0520</td>
+<td>36.4065</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-04-03 15:40:00</td>
+<td>35.5775</td>
+<td>36.2120</td>
+<td>36.0185</td>
+<td>35.6355</td>
+<td>35.5895</td>
+<td>35.3775</td>
+<td>35.4840</td>
+<td>34.9325</td>
+<td>34.9990</td>
+<td>-8.96</td>
+<td>...</td>
+<td>36.2120</td>
+<td>36.0185</td>
+<td>35.6355</td>
+<td>35.5895</td>
+<td>35.3775</td>
+<td>35.4840</td>
+<td>34.9990</td>
+<td>NaN</td>
+<td>35.2535</td>
+<td>36.8095</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-04-03 15:50:00</td>
+<td>35.9095</td>
+<td>36.3515</td>
+<td>36.0960</td>
+<td>35.7905</td>
+<td>35.8375</td>
+<td>35.6410</td>
+<td>35.6415</td>
+<td>35.2580</td>
+<td>35.3555</td>
+<td>-8.96</td>
+<td>...</td>
+<td>36.3515</td>
+<td>36.0960</td>
+<td>35.7905</td>
+<td>35.8375</td>
+<td>35.6410</td>
+<td>35.6415</td>
+<td>35.3555</td>
+<td>NaN</td>
+<td>35.5015</td>
+<td>36.9180</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-04-03 16:00:00</td>
+<td>35.9715</td>
+<td>36.2895</td>
+<td>36.0805</td>
+<td>35.7595</td>
+<td>35.8220</td>
+<td>35.6410</td>
+<td>35.6730</td>
+<td>35.3365</td>
+<td>35.4655</td>
+<td>-8.96</td>
+<td>...</td>
+<td>36.2895</td>
+<td>36.0805</td>
+<td>35.7595</td>
+<td>35.8220</td>
+<td>35.6410</td>
+<td>35.6730</td>
+<td>35.4655</td>
+<td>NaN</td>
+<td>35.5945</td>
+<td>36.9180</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-04-03 16:10:00</td>
+<td>36.4240</td>
+<td>36.8320</td>
+<td>36.6230</td>
+<td>36.3375</td>
+<td>36.3200</td>
+<td>36.0905</td>
+<td>36.1745</td>
+<td>35.6815</td>
+<td>35.8425</td>
+<td>-8.96</td>
+<td>...</td>
+<td>36.8320</td>
+<td>36.6230</td>
+<td>36.3375</td>
+<td>36.3200</td>
+<td>36.0905</td>
+<td>36.1745</td>
+<td>35.8425</td>
+<td>NaN</td>
+<td>35.9665</td>
+<td>37.3990</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-04-03 16:20:00</td>
+<td>36.3775</td>
+<td>36.8165</td>
+<td>36.7005</td>
+<td>36.3375</td>
+<td>36.3665</td>
+<td>36.1370</td>
+<td>36.2065</td>
+<td>35.6320</td>
+<td>35.8260</td>
+<td>-8.96</td>
+<td>...</td>
+<td>36.8165</td>
+<td>36.7005</td>
+<td>36.3375</td>
+<td>36.3665</td>
+<td>36.1370</td>
+<td>36.2065</td>
+<td>35.8260</td>
+<td>NaN</td>
+<td>35.9820</td>
+<td>37.3995</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-04-03 16:30:00</td>
+<td>36.5480</td>
+<td>36.9405</td>
+<td>36.9330</td>
+<td>36.5570</td>
+<td>36.4600</td>
+<td>36.2765</td>
+<td>36.3930</td>
+<td>35.7110</td>
+<td>35.9515</td>
+<td>-8.96</td>
+<td>...</td>
+<td>36.9405</td>
+<td>36.9330</td>
+<td>36.5570</td>
+<td>36.4600</td>
+<td>36.2765</td>
+<td>36.3930</td>
+<td>35.9515</td>
+<td>NaN</td>
+<td>36.0120</td>
+<td>37.6500</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-04-03 16:40:00</td>
+<td>36.0210</td>
+<td>36.1810</td>
+<td>36.1115</td>
+<td>35.8370</td>
+<td>35.8840</td>
+<td>35.6410</td>
+<td>35.7180</td>
+<td>35.2270</td>
+<td>35.4795</td>
+<td>-8.96</td>
+<td>...</td>
+<td>36.1810</td>
+<td>36.1115</td>
+<td>35.8370</td>
+<td>35.8840</td>
+<td>35.6410</td>
+<td>35.7180</td>
+<td>35.4795</td>
+<td>NaN</td>
+<td>35.6255</td>
+<td>36.9180</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2023-04-03 16:50:00</td>
+<td>37.1835</td>
+<td>37.6845</td>
+<td>38.0830</td>
+<td>38.3500</td>
+<td>37.1945</td>
+<td>36.9330</td>
+<td>37.0900</td>
+<td>36.4765</td>
+<td>36.7915</td>
+<td>-8.96</td>
+<td>...</td>
+<td>37.6845</td>
+<td>38.0830</td>
+<td>38.3500</td>
+<td>37.1945</td>
+<td>36.9330</td>
+<td>37.0900</td>
+<td>36.7915</td>
+<td>NaN</td>
+<td>36.8110</td>
+<td>38.2425</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2023-04-03 17:00:00</td>
+<td>37.6175</td>
+<td>38.4130</td>
+<td>38.5170</td>
+<td>38.5530</td>
+<td>37.5835</td>
+<td>37.3865</td>
+<td>37.5400</td>
+<td>36.6940</td>
+<td>36.9470</td>
+<td>-8.96</td>
+<td>...</td>
+<td>38.4130</td>
+<td>38.5170</td>
+<td>38.5530</td>
+<td>37.5835</td>
+<td>37.3865</td>
+<td>37.5400</td>
+<td>36.9470</td>
+<td>NaN</td>
+<td>37.1190</td>
+<td>38.6640</td>
+</tr>
+</tbody>
+</table>
+
+<p>31 rows × 23 columns</p>
+</div>
+</div>
+</div>
+</div>
+<div id="ca797199" class="cell" data-scrolled="true" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Ti[<span class="st">'cafe'</span>].mean()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>T1     33.775290
+T10    34.193855
+T11    34.018613
+T12    33.641129
+T2     33.673581
+T3     33.479774
+T4     33.521403
+T5     33.155145
+T6     33.234935
+T7     -8.960000
+T8     33.368887
+T9     34.790387
+dtype: float64</code></pre>
+</div>
+</div>
+<div id="5dba5a24" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Ti[<span class="st">'cafe'</span>].mean(axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>ts
+2023-04-03 12:00:00    26.349000
+2023-04-03 12:10:00    26.275375
+2023-04-03 12:20:00    27.143667
+2023-04-03 12:30:00    27.206000
+2023-04-03 12:40:00    27.868625
+2023-04-03 12:50:00    27.511917
+2023-04-03 13:00:00    27.418542
+2023-04-03 13:10:00    28.591042
+2023-04-03 13:20:00    28.701333
+2023-04-03 13:30:00    28.775000
+2023-04-03 13:40:00    28.616833
+2023-04-03 13:50:00    29.304750
+2023-04-03 14:00:00    29.690792
+2023-04-03 14:10:00    30.141417
+2023-04-03 14:20:00    29.853000
+2023-04-03 14:30:00    30.791875
+2023-04-03 14:40:00    30.692000
+2023-04-03 14:50:00    30.884833
+2023-04-03 15:00:00    31.336500
+2023-04-03 15:10:00    31.411875
+2023-04-03 15:20:00    31.226167
+2023-04-03 15:30:00    31.639375
+2023-04-03 15:40:00    31.910750
+2023-04-03 15:50:00    32.111708
+2023-04-03 16:00:00    32.132625
+2023-04-03 16:10:00    32.560917
+2023-04-03 16:20:00    32.568458
+2023-04-03 16:30:00    32.706042
+2023-04-03 16:40:00    32.140292
+2023-04-03 16:50:00    33.490000
+2023-04-03 17:00:00    33.839542
+dtype: float64</code></pre>
+</div>
+</div>
+<div id="9df90909" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">4</span>))</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>ax.plot(Ti[<span class="st">'cafe'</span>].mean(axis<span class="op">=</span><span class="dv">1</span>),<span class="st">'r.'</span>,label<span class="op">=</span><span class="st">'cafe'</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>ax.plot( Ti[<span class="st">'ext'</span>].mean(axis<span class="op">=</span><span class="dv">1</span>),<span class="st">'k.'</span>,label<span class="op">=</span><span class="st">'ext'</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">20</span>,<span class="dv">40</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Fecha'</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Temperatura [oC]'</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>ax.legend()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="EF_Analisis_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../notebooks/semanaCuatro/EF_LimpiezaDatos.html" class="pagination-link" aria-label="Ejercicio Final - Parte 2: Limpieza de datos">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Ejercicio Final - Parte 2: Limpieza de datos</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../notebooks/semanaCuatro/Paquetes.html" class="pagination-link" aria-label="Recomendaciones de paquetes a explorar">
+        <span class="nav-page-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Recomendaciones de paquetes a explorar</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Logo por Dnu72, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons.</p>
+</div>   
+    <div class="nav-footer-center">
+<p><a href="https://github.com/altamarmx/explorador">Repositorio</a></p>
+</div>
+    <div class="nav-footer-right">
+<p>Construido con <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

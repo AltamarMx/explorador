@@ -1,0 +1,20 @@
+
+"Hola, en este video veremos el slicing y el fancy slicing. Estas técnicas son usadas para acceder a datos contenidos en arreglos.
+
+
+Comencemos con el slicing. En NumPy, el slicing se utiliza para acceder a segmentos de arreglos. Por ejemplo, si tienes un arreglo unidimensional, puedes usar slicing para obtener los primeros cinco elementos, los últimos tres, del primero al ultimo saltando de dos en dos, o cualquier otra combinación que necesites, 
+
+Es importante recordar que Python y NumPy utilizan indexación basada en cero y en el slicing, el  límite superior  no se incluye.
+
+
+El slicing también es extremadamente útil en arreglos multidimensionales. Por ejemplo, piensa en una imagen PNG que suele tener cuatro capas, tres para el rojo, verde y azul, y otra para la transparencia.
+
+
+Ahora, hablemos sobre el fancy slicing. A diferencia del slicing regular, el fancy slicing te permite acceder a elementos no contiguos o patrones más complejos dentro de un arreglo mediante posiciones específicas en una lista.
+
+
+
+
+Estas técnicas son esenciales porque nos permiten extraer datos de los arreglos con una gran flexibilidad y eficiencia. Son herramientas poderosas en análisis de datos, ciencia de datos y el machine learning y redes neuronales, donde el manejo eficiente de grandes conjuntos de datos es crucial.
+
+Vamos a la libreta de Jupyter para ver algunos ejemplos.

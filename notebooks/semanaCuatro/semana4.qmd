@@ -1,0 +1,15 @@
+# Semana Cuatro
+
+ 
+Los objetivos de esta semana serán:
+
+1.  Entender el concepto de espacio de trabajo y su importancia para organizar y acceder eficientemente a proyectos y datos.
+1.  Dominar la narrativa computacional en las libretas, comprendiendo cómo los nombres de variables, el orden de las libretas y la documentación contribuyen a una narrativa coherente que facilita el entendimiento y la colaboración en proyectos.
+1.  Aprender a concatenar archivos con pandas para manejar conjuntos de datos grandes o divididos, permitiendo su combinación en una sola estructura de datos para análisis complejos.
+1.  Explorar el uso de multiíndices en columnas e índices de series temporales para manejar datos más complejos, mejorando la organización y el acceso a subconjuntos específicos de datos.
+1.  Comprender la importancia del encoding (codificación) en la preparación o importación de datos para asegurar su interpretación correcta por las herramientas de análisis.
+1.  Desarrollar habilidades para crear paquetes locales, permitiendo la reutilización y el intercambio eficiente de código, esencial para modularizar y mejorar la calidad de los proyectos.
+1.  Repasar las buenas prácticas en ciencia de datos, desde la escritura de código limpio hasta la gestión eficaz de proyectos y datos.
+1.  Aplicar las buenas prácticas aprendidas en proyectos futuros.
+1.  Demostrar comprensión y habilidad para aplicar conceptos aprendidos en un ejercicio final que resuma las buenas prácticas.
+1.  Explorar recomendaciones de paquetes adicionales para ampliar la caja de herramientas y estar preparado para enfrentar desafíos más complejos en ciencia de datos.

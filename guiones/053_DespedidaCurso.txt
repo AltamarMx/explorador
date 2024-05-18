@@ -1,0 +1,22 @@
+
+Hemos llegado al final de este viaje de aprendizaje en Python para que pases de usuario a explorador.
+
+
+En la primera semana Comenzamos fortaleciendo nuestra comprensión de las funciones  en Python. Nos adentramos en el proceso de extracción, tranformación y carga de datos, 
+exploramos series temporales y nos familiarizamos con pandas y los dataframes. Aprendimos a importar archivos CSV y XLSX,  revisando las opciones avanzadas de `read_csv` y read_excel 
+para un manejo eficiente de datos.
+
+En la semana dos, Avanzamos hacia la visualización de datos con Matplotlib. Descubrieron la anatomía de una gráfica, 
+exploraron diferentes tipos de gráficas. También creamos gráficas temporales y aprendimos a personalizar nuestras visualizaciones. 
+La habilidad para manejar múltiples gráficas y gridspec seguramente enriqueció su arsenal de herramientas de visualización.
+
+En la semana tres Nos adentramos en el poderoso mundo de NumPy y las operaciones con Arrays. 
+Importamos y manejamos datos con NumPy, empleando técnicas de slicing, fancy slicing,  y hasta cargamos imágenes para análisis más complejos.
+Descubrimos también herramientas  para álgebra lineal en numpy.
+
+En la semana cuatro, consolidamos tu conocimiento con prácticas avanzadas de manipulación de datos usando pandas. Hablamos sobre multiíndices, encoding, 
+y la importancia de desarrollar paquetes locales. Reforzamos las buenas prácticas en la narrativa computacional y la gestión de proyectos.
+
+Espero que cada uno de ustedes haya aprovechado este curso para no solo aprender, sino también aplicar estos conocimientos en el proyecto final.
+Espero en que muchos de ustedes hayan decidido por realizar este  proyecto para graduarse con honores.
+

@@ -1,0 +1,17 @@
+Hola, en esta ocasión exploraremos un tema de organizaci'on que es clave en tus proyectos de análisis de dato la narrativa computacional.
+
+Piensa en que tus libretas tienen una historia, y que esa historia se va contanndo por el orden y nombre de tus libretas, entonces comienza con la numeración y nombres descriptivos de tus carpetas y archivos. Por ejemplo,
+'001_LimpiezaDeDatos'.
+‘002_ConcatenandoDatos',
+'003_AnalisisExploratorio'
+'004_ExportandoDatos'
+
+Dentro de tus libretas de Jupyter, es igualmente importante usar nombres descriptivos para tus dataframes, variables, y hasta para los archivos de salida de tu análisis. Esto no solo te ayuda a ti y a tu equipo a seguir el flujo de trabajo, sino que también convierte tu proyecto en una historia coherente y fácil de entender.
+
+Por ejemplo, si tienes un archivo de datos de temixco, escoge un nombre adecuado.
+
+Si generas subconjuntos de datos, nombralos de acuerdo a eso.
+
+No olvides documentar con comentarios, uso de markdown e inclusive formulas si las usas en alguna parte de tu proceso.
+
+Finalmente, también los nombres son importantes, te deben dar una idea de lo que contienen para que esto te ayude a no cometer errores.

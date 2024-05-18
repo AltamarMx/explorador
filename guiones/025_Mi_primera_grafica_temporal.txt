@@ -1,0 +1,14 @@
+
+Hola, en esta sesión vamos a ver como usar `plt.subplots()` para crear una figura a partir de una serie temporal y tener todo el control sobre ella.
+
+
+`plt.subplots()` es la herramienta perfecta para generar múltiples gráficos o una sola figura, por lo que de ahora en adelante en este curso la estaremos usando.
+
+
+Con `plt.subplots()`, podemos especificar el número exacto de filas y columnas que necesitamos, organizando nuestros gráficos en una cuadrícula ordenada que facilita la comparación visual directa.
+
+Pero no te equivoques, `plt.subplots()` no es solo para múltiples gráficos. También es extremadamente útil para crear una sola figura, dándonos un acceso inmediato a los objetos de figura fig y ejes ax para una personalización completa.
+
+`plt.subplots()` regresa dos objetos, el objeto fig, y el objeto 'ax', siendo este segundo el que utilizaremos para graficar.
+
+vamos a la libreta de Jupyter para aplicarlo a una figura.

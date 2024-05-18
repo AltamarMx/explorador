@@ -1,0 +1,16 @@
+Hola, en este video te voy a enlistas las buenas prácticas que recomendamos para tener un flujo de trabajo robusto, reproducible y colaborativo.
+
+
+1. Ten un espacio de trabajo bien definido para tus proyectos.
+1. Cuida la narrativa computacional de tus libretas:
+	1. Numeracion y nombres 
+	1. Divide tus libretas en pasos claros y lógicos
+	1. Comenta tus libretas usando markdown
+	1. Usa nombres de variables alusivas
+1. Reinicia el kernel de tu libreta de vez en cuando. 
+1. Al guardar tus libretas, es buena practica que hubieras ejecutando celdas de manera consecutiva.
+1. Usa nombres alusivos para tus datos, por ejemplo Temixco_mayo2023.csv
+1. Agrupa operaciones para tener un flujo de trabajo robusto
+
+
+
